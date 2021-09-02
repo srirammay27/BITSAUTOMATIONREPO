@@ -1,9 +1,0 @@
-name: BITS Automation
-verbose: 2
-configFailurePolicy: skip
-tests:
-  - name: Suggest Station
-  verbose: 2
-  classes:
-    - testCases.Suggest_Station
-
