@@ -19,7 +19,7 @@ public class ExcelUtils {
 	public static String username;
 
 	 public static String getExcelData(String sheetName, int rowNum, int colNum) throws Throwable{
-		 FileInputStream fis = new FileInputStream("C:\\Users\\rajeev_m\\eclipse-workspace\\BITSAUTOMATION\\excel\\TestData.xlsx");
+		 FileInputStream fis = new FileInputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData.xlsx");
 		      Workbook wb = WorkbookFactory.create(fis);
 		      Sheet sh = wb.getSheet(sheetName);
 		      Row row = sh.getRow(rowNum);
@@ -28,7 +28,7 @@ public class ExcelUtils {
 		 return data;
 	 }
 		 public static int getExcelData1(String sheetName, int rowNum, int colNum) throws Throwable{
-			 FileInputStream fis = new FileInputStream("C:\\Users\\rajeev_m\\eclipse-workspace\\BITSAUTOMATION\\excel\\TestData.xlsx");
+			 FileInputStream fis = new FileInputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData.xlsx");
 			      Workbook wb = WorkbookFactory.create(fis);
 			      Sheet sh = wb.getSheet(sheetName);
 			      Row row = sh.getRow(rowNum);
@@ -38,7 +38,7 @@ public class ExcelUtils {
 			 }
 			  
 			  public static int getCellCount(String sheetName) throws Throwable {
-			    FileInputStream fis = new FileInputStream("D:\\Eclipse\\Workspace\\PIBSApplication\\excel\\TestData.xlsx");
+			    FileInputStream fis = new FileInputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData.xlsx");
 			 Workbook wb = WorkbookFactory.create(fis);
 			 Sheet sh = wb.getSheet(sheetName);
 			 Row row = sh.getRow(0);
@@ -47,7 +47,7 @@ public class ExcelUtils {
 			 }
 
 			 public static int getExcelRandomRowNum(String sheetName) throws Throwable{
-			 FileInputStream fis = new FileInputStream("D:\\Eclipse\\Workspace\\PIBSApplication\\excel\\TestData.xlsx");
+			 FileInputStream fis = new FileInputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData.xlsx");
 			      Workbook wb = WorkbookFactory.create(fis);
 			      Sheet sh = wb.getSheet(sheetName);
 			      Random rand = new Random();
@@ -55,36 +55,36 @@ public class ExcelUtils {
 			      return rowNum;
 			 }
 			 public static void setExcelData(String sheetName, int rowNum, int colNum,String data) throws Throwable{
-			 FileInputStream fis = new FileInputStream("D:\\Eclipse\\Workspace\\PIBSApplication\\excel\\TestData.xlsx");
+			 FileInputStream fis = new FileInputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData.xlsx");
 			      Workbook wb = WorkbookFactory.create(fis);
 			      Sheet sh = wb.getSheet(sheetName);
 			      Row row = sh.getRow(rowNum);
 			      Cell cel = row.createCell(colNum);
 			      cel.setCellValue(data);
-			      FileOutputStream fos = new FileOutputStream("D:\\\\Eclipse\\\\Workspace\\\\PIBSApplication\\\\excel\\\\TestData.xlsx");
+			      FileOutputStream fos = new FileOutputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData_Out.xlsx");
 			 wb.write(fos);
 			 wb.close();
 			 }
 			 public static int getRowCount(String sheetName) throws Throwable {
-			 FileInputStream fis = new FileInputStream("D:\\Eclipse\\Workspace\\PIBSApplication\\excel\\TestData.xlsx");
+			 FileInputStream fis = new FileInputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData.xlsx");
 			      Workbook wb = WorkbookFactory.create(fis);
 			      int rowIndex = wb.getSheet(sheetName).getLastRowNum();
 			      return rowIndex;
 			 }
 
 			 public static void setExcelDataInteg(String sheetName, int rowNum, int colNum,int data) throws Throwable{
-			 FileInputStream fis = new FileInputStream("D:\\Eclipse\\Workspace\\PIBSApplication\\excel\\TestData.xlsx");
+			 FileInputStream fis = new FileInputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData.xlsx");
 			      Workbook wb = WorkbookFactory.create(fis);
 			      Sheet sh = wb.getSheet(sheetName);
 			      Row row = sh.getRow(rowNum);
 			      Cell cel = row.createCell(colNum);
 			      cel.setCellValue(data);
-			      FileOutputStream fos = new FileOutputStream("D:\\Eclipse\\Workspace\\PIBSApplication\\excel\\TestData.xlsx");
+			      FileOutputStream fos = new FileOutputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData_Out.xlsx");
 			 wb.write(fos);
 			 wb.close();
 	 }
 			 public String getUserName() throws IOException  {
-					FileInputStream fs = new FileInputStream("C:\\Users\\rajeev_m\\eclipse-workspace\\BITSAUTOMATION\\excel\\TestData.xlsx");
+					FileInputStream fs = new FileInputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData.xlsx");
 					workbook=new XSSFWorkbook(fs);
 					XSSFSheet sheet = workbook.getSheetAt(0);
 					Row row = sheet.getRow(1);
