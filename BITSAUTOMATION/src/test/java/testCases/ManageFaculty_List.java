@@ -60,7 +60,7 @@ public class ManageFaculty_List extends CommonFunctions{
 		Thread.sleep(1000);
 		ManageFaculty_List_Page_Objects.SortCampus.click();
 		Thread.sleep(1000);
-		ManageFaculty_List_Page_Objects.SortFType.click();
+		//ManageFaculty_List_Page_Objects.SortFType.click();
 		Thread.sleep(1000);
 		ManageFaculty_List_Page_Objects.SortStatus.click();
 		Thread.sleep(1000);
