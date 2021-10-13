@@ -153,7 +153,7 @@ public class CommonFunctions{
 		Row row = sh.getRow(rowNum);
 		Cell cel = row.createCell(colNum);
 		cel.setCellValue(data);
-		FileOutputStream fos = new FileOutputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData.xlsx");
+		FileOutputStream fos = new FileOutputStream("C:\\Users\\rajeev_m\\git\\repository\\BITSAUTOMATION\\excel\\TestData_Out.xlsx");
 		wb.write(fos);
 		wb.close();
 	}
