@@ -23,9 +23,9 @@ import CommonFunctions.CommonFunctions;
 //import pageObjects.Student_Course_List_Page_Objects;
 import pageObjects.Student_Data_List_Page_Objects;
 
-public class Student_Data_List extends CommonFunctions{
+public class AdminRole_Student_Data_List extends CommonFunctions{
 	
-	static Logger logger = Logger.getLogger(Student_Data_List.class);
+	static Logger logger = Logger.getLogger(AdminRole_Student_Data_List.class);
 	
 	@Test(priority = 0)
 	public void StudentDataMenu() throws InterruptedException, IOException
@@ -78,7 +78,7 @@ public class Student_Data_List extends CommonFunctions{
 		}
 		else
 		{
-			extenttestCase.log(Status.INFO, "Invalid Search Validation Failed");
+			extenttestCase.log(Status.FAIL, "Invalid Search Validation Failed");
 		}
 
 		Student_Data_List_Page_Objects.SearchField.clear();
@@ -108,7 +108,7 @@ public class Student_Data_List extends CommonFunctions{
 		}
 		else
 		{
-			extenttestCase.log(Status.INFO, "Student Name Search Validation Failed");
+			extenttestCase.log(Status.FAIL, "Student Name Search Validation Failed");
 		}
 		Thread.sleep(2000);
 		Student_Data_List_Page_Objects.SearchField.clear();
@@ -134,7 +134,7 @@ public class Student_Data_List extends CommonFunctions{
 		}
 		else
 		{
-			extenttestCase.log(Status.INFO, "Campus ID Search Validation Failed");
+			extenttestCase.log(Status.FAIL, "Campus ID Search Validation Failed");
 		}
 		Thread.sleep(2000);
 		Student_Data_List_Page_Objects.SearchField.clear();
@@ -160,7 +160,7 @@ public class Student_Data_List extends CommonFunctions{
 		}
 		else
 		{
-			extenttestCase.log(Status.INFO, "Campus Name Search Validation Failed");
+			extenttestCase.log(Status.FAIL, "Campus Name Search Validation Failed");
 		}
 
 		Student_Data_List_Page_Objects.SearchSelect.sendKeys(getExcelData("MSData", 1, 0));
@@ -205,11 +205,11 @@ public class Student_Data_List extends CommonFunctions{
 		  extenttestCase.log(Status.INFO, "Upload File Validation Failed"); }
 	  }
 	  
-	  @Test(priority = 7) public void UploadValidStudent() throws
-	  Throwable {
+	  @Test(priority = 7)
+	  public void UploadValidStudent() throws Throwable {
 	  extenttestCase.log(Status.INFO,"Verifying Valid Student Record Upload");
-	  
 	  Student_Data_List_Page_Objects.SelectPSType.sendKeys(getExcelData("MSData", 6, 0));
+	  
 	  Thread.sleep(2000);
 	  
 	  Student_Data_List_Page_Objects.SelectPSBatch.sendKeys(getExcelData("MSData", 7, 0));
@@ -219,7 +219,7 @@ public class Student_Data_List extends CommonFunctions{
 	  act.moveToElement(Student_Data_List_Page_Objects.ChooseFile).click().
 	  perform(); Thread.sleep(2000);
 	  
-	  String file = "D:\\StudentRecord\\ValidStudent.xlsx"; 
+	  String file = "E:\\FacultyRecord\\ValidStudent.xlsx"; 
 	  StringSelection
 	  selection = new StringSelection(file);
 	  Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection,
@@ -235,9 +235,21 @@ public class Student_Data_List extends CommonFunctions{
 	  
 	  Thread.sleep(2000); 
 	  Student_Data_List_Page_Objects.UploadFile.click();
+	  Thread.sleep(15000);
+	  
+	  Student_Data_List_Page_Objects.Refresh.click(); Thread.sleep(2000);
 	  Thread.sleep(2000);
 	  
 	  Student_Data_List_Page_Objects.Refresh.click(); Thread.sleep(2000);
+	  Thread.sleep(2000);
+	  
+	  Student_Data_List_Page_Objects.Refresh.click(); Thread.sleep(2000);
+	  Thread.sleep(2000);
+	  
+	  Student_Data_List_Page_Objects.Refresh.click(); Thread.sleep(2000);
+	  Thread.sleep(2000);
+	  
+	  driver.navigate().refresh(); Thread.sleep(2000);
 	  
 	  Student_Data_List_Page_Objects.CancelUpload.click(); Thread.sleep(3000);
 	  
@@ -245,7 +257,8 @@ public class Student_Data_List extends CommonFunctions{
 	  
 	  }
 	  
-	  @Test(priority = 8) public void VerifyUploadedrecord() throws Throwable 
+	 @Test(priority = 8) 
+	  public void VerifyUploadedrecord() throws Throwable 
 	  {
 		  extenttestCase.log(Status.INFO,"Verifying Uploaded Student in List Grid");
 		  
@@ -283,6 +296,18 @@ public class Student_Data_List extends CommonFunctions{
 		{
 			extenttestCase.log(Status.INFO,"Verifying Inactive Record");
 			
+			Student_Data_List_Page_Objects.MSMenu.click();
+			Thread.sleep(2000);
+			
+			Student_Data_List_Page_Objects.SDMenu.click();
+			Thread.sleep(2000); 
+			
+			Student_Data_List_Page_Objects.SearchField.clear();
+			Thread.sleep(2000);
+			
+			Student_Data_List_Page_Objects.SearchField.sendKeys(getExcelData("MSData", 5, 1));
+			Thread.sleep(2000);
+			
 			Student_Data_List_Page_Objects.Checkbox.click();
 			Thread.sleep(2000);
 			
@@ -308,8 +333,14 @@ public class Student_Data_List extends CommonFunctions{
 	  @Test(priority = 10)
 		public void VerifyInactive() throws Throwable
 		{
+		 
+		  	Student_Data_List_Page_Objects.MSMenu.click();
+			Thread.sleep(2000);
 			
-		  Student_Data_List_Page_Objects.SearchField.clear();
+			Student_Data_List_Page_Objects.SDMenu.click();
+			Thread.sleep(2000); 
+			
+		    Student_Data_List_Page_Objects.SearchField.clear();
 			Thread.sleep(2000);
 			
 			Student_Data_List_Page_Objects.SearchField.sendKeys(getExcelData("MSData", 5, 1));
@@ -324,7 +355,7 @@ public class Student_Data_List extends CommonFunctions{
 			}
 			else
 			{
-				extenttestCase.log(Status.INFO, "Student Inactivation Failed");
+				extenttestCase.log(Status.FAIL, "Student Inactivation Failed");
 			}
 		}
 	  
@@ -332,6 +363,18 @@ public class Student_Data_List extends CommonFunctions{
 		public void ClickActive() throws Throwable
 		{
 			extenttestCase.log(Status.INFO,"Verifying Active Record");
+			
+			Student_Data_List_Page_Objects.MSMenu.click();
+			Thread.sleep(2000);
+			
+			Student_Data_List_Page_Objects.SDMenu.click();
+			Thread.sleep(2000); 
+			
+		    Student_Data_List_Page_Objects.SearchField.clear();
+			Thread.sleep(2000);
+			
+			Student_Data_List_Page_Objects.SearchField.sendKeys(getExcelData("MSData", 5, 1));
+			Thread.sleep(2000);
 			
 			Student_Data_List_Page_Objects.Checkbox.click();
 			Thread.sleep(2000);
@@ -359,7 +402,13 @@ public class Student_Data_List extends CommonFunctions{
 		public void VerifyActive() throws Throwable
 		{
 			
-		  Student_Data_List_Page_Objects.SearchField.clear();
+			Student_Data_List_Page_Objects.MSMenu.click();
+			Thread.sleep(2000);
+			
+			Student_Data_List_Page_Objects.SDMenu.click();
+			Thread.sleep(2000); 
+			
+		    Student_Data_List_Page_Objects.SearchField.clear();
 			Thread.sleep(2000);
 			
 			Student_Data_List_Page_Objects.SearchField.sendKeys(getExcelData("MSData", 5, 1));
@@ -374,7 +423,7 @@ public class Student_Data_List extends CommonFunctions{
 			}
 			else
 			{
-				extenttestCase.log(Status.INFO, "Student Activation Failed");
+				extenttestCase.log(Status.FAIL, "Student Activation Failed");
 			}
 		}
 	  
@@ -382,6 +431,18 @@ public class Student_Data_List extends CommonFunctions{
 		public void ClickDelete () throws Throwable
 		{
 			extenttestCase.log(Status.INFO,"Verifying Delete Record");
+			
+			Student_Data_List_Page_Objects.MSMenu.click();
+			Thread.sleep(2000);
+			
+			Student_Data_List_Page_Objects.SDMenu.click();
+			Thread.sleep(2000); 
+			
+		    Student_Data_List_Page_Objects.SearchField.clear();
+			Thread.sleep(2000);
+			
+			Student_Data_List_Page_Objects.SearchField.sendKeys(getExcelData("MSData", 5, 1));
+			Thread.sleep(2000);
 			
 			Student_Data_List_Page_Objects.Checkbox.click();
 			Thread.sleep(2000);
@@ -409,7 +470,13 @@ public class Student_Data_List extends CommonFunctions{
 		public void VerifyDelete() throws Throwable
 		{
 			
-		  Student_Data_List_Page_Objects.SearchField.clear();
+			Student_Data_List_Page_Objects.MSMenu.click();
+			Thread.sleep(2000);
+			
+			Student_Data_List_Page_Objects.SDMenu.click();
+			Thread.sleep(2000); 
+			
+		    Student_Data_List_Page_Objects.SearchField.clear();
 			Thread.sleep(2000);
 			
 			Student_Data_List_Page_Objects.SearchField.sendKeys(getExcelData("MSData", 5, 1));
@@ -425,7 +492,7 @@ public class Student_Data_List extends CommonFunctions{
 			}
 			else
 			{
-				extenttestCase.log(Status.INFO, "Student Deletion Failed");
+				extenttestCase.log(Status.FAIL, "Student Deletion Failed");
 			}
 			
 			Student_Data_List_Page_Objects.SearchField.clear();

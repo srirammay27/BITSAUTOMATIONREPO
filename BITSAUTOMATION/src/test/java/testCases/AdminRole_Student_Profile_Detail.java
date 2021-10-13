@@ -18,27 +18,46 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 
 import CommonFunctions.CommonFunctions;
+import pageObjects.Student_Data_List_Page_Objects;
 import pageObjects.Student_Profile_Detail_Page_Objects;
 
-public class Student_Profile_Detail extends CommonFunctions{
+public class AdminRole_Student_Profile_Detail extends CommonFunctions{
 	
-	static Logger logger = Logger.getLogger(Student_Profile_Detail.class);
+	static Logger logger = Logger.getLogger(AdminRole_Student_Profile_Detail.class);
 	
 	@Test(priority = 0)
-	public void ProfileMenu() throws InterruptedException, IOException
+	public void StudentDataMenu() throws InterruptedException, IOException
 	{
-		extenttestCase=extentReport.createTest("Verifying Profile Detail Page");
-		PageFactory.initElements(driver, Student_Profile_Detail_Page_Objects.class);
-		extenttestCase.log(Status.INFO,"Landing into Profile Menu");
-		Student_Profile_Detail_Page_Objects.ProfileMenu.click();
+		extenttestCase=extentReport.createTest("Verifying Manage Student Data List Page");
+		PageFactory.initElements(driver, Student_Data_List_Page_Objects.class);
+		extenttestCase.log(Status.INFO,"Landing into Manage Student Data List");
+		Student_Data_List_Page_Objects.MSMenu.click();
 		Thread.sleep(2000);
-		
+		Student_Data_List_Page_Objects.SDMenu.click();
+		Thread.sleep(2000);
+
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		File sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
-		File destinationFile = new File("ProfileDetail.png");
+		File destinationFile = new File("StudentDataList.png");
 		FileHandler.copy(sourceFile, destinationFile);
-		extenttestCase.addScreenCaptureFromPath("ProfileDetail.png");
+		extenttestCase.addScreenCaptureFromPath("StudentDataList.png");
+
+	}
+	@Test(priority = 1)
+	public void NavigateToProfile() throws Throwable
+	{
+		PageFactory.initElements(driver, Student_Data_List_Page_Objects.class);
+		Student_Data_List_Page_Objects.SearchSelect.sendKeys(getExcelData("MSData", 1, 0));
+		Thread.sleep(2000);
+
+		Student_Data_List_Page_Objects.SearchSelect.sendKeys(getExcelData("MSData", 2, 0));
+		Thread.sleep(2000);
+
+		Student_Data_List_Page_Objects.SearchField.sendKeys(getExcelData("MSData", 2, 2));
+		Thread.sleep(2000);	
 		
+		Student_Data_List_Page_Objects.GridRow1.click();
+		Thread.sleep(2000);	
 	}
 	
 	@Test(priority = 1)
@@ -61,7 +80,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 		Student_Profile_Detail_Page_Objects.UploadPhoto.click();
 		Thread.sleep(2000);
 		
-		String file = "D:\\UploadProfilePic\\ProfilePic.jpg";
+		String file = "E:\\FacultyRecord\\ProfilePic.jpg";
 		StringSelection selection = new StringSelection(file);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
 
@@ -195,7 +214,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 		Thread.sleep(2000);
 	}
 	
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void ViewBioData() throws InterruptedException, IOException
 	{
 		extenttestCase.log(Status.INFO,"Verifying Close Bio-Data in Profile");
@@ -226,7 +245,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 		
 	}
 	
-	@Test(priority = 4)
+	//@Test(priority = 4)
 	public void AddAcademic() throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Add Academic in Profile's Bio-Data ");
@@ -275,7 +294,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 		
 	}
 	
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	public void DeleteAcademic() throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Delete Academic in Profile's Bio-Data ");
@@ -295,13 +314,13 @@ public class Student_Profile_Detail extends CommonFunctions{
 		else
 			
 		{
-			extenttestCase.log(Status.INFO,"Academic Deletion Failed");
+			extenttestCase.log(Status.FAIL,"Academic Deletion Failed");
 		}
 		
 		driver.navigate().refresh();
 	}
 	
-	@Test(priority = 6)
+	//@Test(priority = 6)
 	public void AgainAcademic() throws Throwable
 	{
             
@@ -339,7 +358,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 		
 	}
 	
-	@Test(priority = 7)
+	//@Test(priority = 7)
 	public void MandatoryCheck() throws InterruptedException
 	{
 		extenttestCase.log(Status.INFO,"Verifying Close Bio-Data in Profile");
@@ -369,7 +388,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 		
 	}
 	
-	@Test(priority = 8)
+	//@Test(priority = 8)
 	public void AddBioData() throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Add Bio-Data in Profile");
@@ -399,7 +418,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 		
 	}
 	
-	@Test(priority = 9)
+	//@Test(priority = 9)
 	public void SortVCList() throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Sort Functionality in Profile View Course");
@@ -430,7 +449,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 		
 	}
 	
-	@Test(priority = 10)
+	//@Test(priority = 10)
 	public void VCInvalidCheck() throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Invalid Search Validation in List Grid");
@@ -456,7 +475,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 		
 	}
 	
-	@Test(priority = 11)
+	//@Test(priority = 11)
 	public void VerifyDesSearch() throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Description Search in View Course");
@@ -482,7 +501,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 		
 	}
 	
-	@Test(priority = 12)
+	//@Test(priority = 12)
 	public void VerifySubjectSearch() throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Subject Search in View Course");
@@ -512,7 +531,7 @@ public class Student_Profile_Detail extends CommonFunctions{
 	}
 	
 	
-	@Test(priority = 13)
+	//@Test(priority = 13)
 	public void VerifyResume() throws InterruptedException
 	{
 		extenttestCase.log(Status.INFO,"Verifying Resume in Profile");

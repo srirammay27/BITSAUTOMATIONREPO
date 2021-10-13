@@ -40,19 +40,19 @@ public class Login extends CommonFunctions{
 	}
 	
 	@Test(priority = 1)
-	public void invalidUserIdandPassword() throws Throwable
+	public void InvalidUserIdandPassword() throws Throwable
 	{
 		extenttestCase.log(Status.INFO, "Verifying Login Authentication with Invalid User Id and Password");
 		
 		//System.out.println("Start From Here");
 		Login_Page_Objects.UserId.clear();
 		Thread.sleep(2000);
-		Login_Page_Objects.UserId.sendKeys(getExcelData("Login", 3, 0));
+		Login_Page_Objects.UserId.sendKeys(getExcelData("Login", 8, 0));
 		Thread.sleep(2000);
 		Login_Page_Objects.Password.clear();
 		Thread.sleep(2000);
 		
-		Login_Page_Objects.Password.sendKeys(getExcelData("Login", 3, 1));
+		Login_Page_Objects.Password.sendKeys(getExcelData("Login", 8, 1));
 		Thread.sleep(2000);
 		
 		Login_Page_Objects.SignIn.click();
@@ -73,20 +73,20 @@ public class Login extends CommonFunctions{
 	}
 	
 	@Test(enabled = false)
-	public void invalidUserandPassword() throws Throwable
+	public void InvalidUserandPassword() throws Throwable
 	{
 		extenttestCase.log(Status.INFO, "Verifying Login Authentication with Invalid User Id and Invalid Password");
 		
 		Login_Page_Objects.UserId.clear();
 		Thread.sleep(2000);
 		
-		Login_Page_Objects.UserId.sendKeys(getExcelData("Login", 3, 0));
+		Login_Page_Objects.UserId.sendKeys(getExcelData("Login", 8, 0));
 		Thread.sleep(2000);
 		
 		Login_Page_Objects.Password.clear();
 		Thread.sleep(2000);
 		
-		Login_Page_Objects.Password.sendKeys(getExcelData("Login", 3, 1));
+		Login_Page_Objects.Password.sendKeys(getExcelData("Login", 8, 1));
 		Thread.sleep(2000);
 		
 		Login_Page_Objects.SignIn.click();
@@ -115,7 +115,13 @@ public class Login extends CommonFunctions{
 		Login_Page_Objects.UserId.clear();
 		Thread.sleep(2000);
 		
-		Login_Page_Objects.UserId.sendKeys(getExcelData("Login", 2, 0));
+		Login_Page_Objects.UserId.sendKeys(getExcelData("Login", 1, 0));
+		Thread.sleep(2000);
+		
+		Login_Page_Objects.Password.clear();
+		Thread.sleep(2000);
+		
+		Login_Page_Objects.Password.sendKeys(getExcelData("Login", 1, 1));
 		Thread.sleep(2000);
 		
 		Login_Page_Objects.SignIn.click();

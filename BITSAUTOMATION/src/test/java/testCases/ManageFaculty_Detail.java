@@ -119,8 +119,8 @@ public class ManageFaculty_Detail extends CommonFunctions{
 		ManageFaculty_Detail_Page_Objects.SaveAddFaculty.click();
 		Thread.sleep(1000);
 		
-		ManageFaculty_Detail_Page_Objects.AddFType.sendKeys(getExcelData("MFacultyDetail", 1, 9));
-		Thread.sleep(2000);
+		//ManageFaculty_Detail_Page_Objects.AddFType.sendKeys(getExcelData("MFacultyDetail", 1, 9));
+		//Thread.sleep(2000);
 		
 		ManageFaculty_Detail_Page_Objects.SaveAddFaculty.click();
 		Thread.sleep(1000);
@@ -143,8 +143,8 @@ public class ManageFaculty_Detail extends CommonFunctions{
 		ManageFaculty_Detail_Page_Objects.AddPIN.sendKeys(getExcelData("MFacultyDetail", 1, 15));
 		Thread.sleep(2000);
 		
-		ManageFaculty_Detail_Page_Objects.AddHometown.sendKeys(getExcelData("MFacultyDetail", 1, 16));
-		Thread.sleep(2000);
+		//ManageFaculty_Detail_Page_Objects.AddHometown.sendKeys(getExcelData("MFacultyDetail", 1, 16));
+		//Thread.sleep(2000);
 		
 		ManageFaculty_Detail_Page_Objects.CheckGroup.click();
 		Thread.sleep(2000);
@@ -220,8 +220,8 @@ public class ManageFaculty_Detail extends CommonFunctions{
 		ManageFaculty_Detail_Page_Objects.AddLNumber.sendKeys(getExcelData("MFacultyDetail", 2, 8));
 		Thread.sleep(2000);
 		
-		ManageFaculty_Detail_Page_Objects.AddFType.sendKeys(getExcelData("MFacultyDetail", 2, 9));
-		Thread.sleep(2000);
+		//ManageFaculty_Detail_Page_Objects.AddFType.sendKeys(getExcelData("MFacultyDetail", 2, 9));
+		//Thread.sleep(2000);
 		
 		ManageFaculty_Detail_Page_Objects.AddAddress1.clear();
 		Thread.sleep(2000);
@@ -250,11 +250,11 @@ public class ManageFaculty_Detail extends CommonFunctions{
 		ManageFaculty_Detail_Page_Objects.AddPIN.sendKeys(getExcelData("MFacultyDetail", 2, 15));
 		Thread.sleep(2000);
 		
-		ManageFaculty_Detail_Page_Objects.AddHometown.clear();
-		Thread.sleep(2000);
+		//ManageFaculty_Detail_Page_Objects.AddHometown.clear();
+		//Thread.sleep(2000);
 		
-		ManageFaculty_Detail_Page_Objects.AddHometown.sendKeys(getExcelData("MFacultyDetail", 2, 16));
-		Thread.sleep(2000);
+		//ManageFaculty_Detail_Page_Objects.AddHometown.sendKeys(getExcelData("MFacultyDetail", 2, 16));
+		//Thread.sleep(2000);
 		
 		ManageFaculty_Detail_Page_Objects.CheckGroup.click();
 		Thread.sleep(2000);

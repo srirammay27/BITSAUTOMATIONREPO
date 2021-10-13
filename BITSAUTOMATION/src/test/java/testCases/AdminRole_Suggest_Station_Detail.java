@@ -17,9 +17,9 @@ import CommonFunctions.CommonFunctions;
 import pageObjects.Suggest_Station_Detail_Page_Objects;
 import pageObjects.Suggest_Station_List_Page_Objects;
 
-public class Suggest_Station_Detail extends CommonFunctions{
+public class AdminRole_Suggest_Station_Detail extends CommonFunctions{
 	
-	static Logger logger = Logger.getLogger(Suggest_Station_Detail.class);
+	static Logger logger = Logger.getLogger(AdminRole_Suggest_Station_Detail.class);
 	
 	@Test(priority = 0)
 	public void StationMenu() throws InterruptedException, IOException
@@ -28,14 +28,13 @@ public class Suggest_Station_Detail extends CommonFunctions{
 		PageFactory.initElements(driver, Suggest_Station_Detail_Page_Objects.class);
 		extenttestCase.log(Status.INFO,"Landing into Suggest Station List");
 		Suggest_Station_Detail_Page_Objects.SSMenu.click();
-		Thread.sleep(2000);
-		
+		Thread.sleep(2000);		
 	}
 	
 	@Test(priority = 1)
-	public void AddStation() throws InterruptedException, IOException
+	public void ClickAddStation() throws InterruptedException, IOException
 	{
-		extenttestCase.log(Status.INFO,"Landing into Suggest Station Detail");
+		extenttestCase.log(Status.INFO,"Landing into Add Station Detail Page");
 		
 		Suggest_Station_Detail_Page_Objects.AddStation.click();
 		Thread.sleep(2000);
@@ -44,7 +43,7 @@ public class Suggest_Station_Detail extends CommonFunctions{
 		File sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
 		File destinationFile = new File("SuggestStationDetail.png");
 		FileHandler.copy(sourceFile, destinationFile);
-		extenttestCase.addScreenCaptureFromPath("SuggestStationDetail.png");
+		extenttestCase.addScreenCaptureFromPath("AddStationDetail.png");
 	}
 	
 	@Test(priority = 2)
@@ -52,20 +51,31 @@ public class Suggest_Station_Detail extends CommonFunctions{
 	{
 		extenttestCase.log(Status.INFO,"Verifying Add Station Mandatory Field Validation");
 		Suggest_Station_Detail_Page_Objects.Submitbtn.click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		extenttestCase.log(Status.PASS,"Mandatory Field Validation Done Successfully");
 		
 		Suggest_Station_Detail_Page_Objects.Cancelbtn.click();
 		Thread.sleep(2000);
+		System.out.println("Cancel button clicked");
 		
 		Suggest_Station_Detail_Page_Objects.Closebtn.click();
 		Thread.sleep(2000);
+		System.out.println("Close button clicked");
 		
 		Suggest_Station_Detail_Page_Objects.Cancelbtn.click();
 		Thread.sleep(2000);
+		System.out.println("Cancel button clicked");
 		
 		Suggest_Station_Detail_Page_Objects.Okbtn.click();
 		Thread.sleep(2000);
+		System.out.println("Ok button clicked");
+		
+		Suggest_Station_Detail_Page_Objects.AddStation.click();
+		Thread.sleep(2000);
+		
+		Suggest_Station_Detail_Page_Objects.Backbtn.click();
+		Thread.sleep(2000);
+		System.out.println("Back button clicked");
 		
 		Suggest_Station_Detail_Page_Objects.AddStation.click();
 		Thread.sleep(2000);
@@ -76,13 +86,13 @@ public class Suggest_Station_Detail extends CommonFunctions{
 	{
 		extenttestCase.log(Status.INFO,"Verifying Expand and Collapse Functionality Validation");
 		Suggest_Station_Detail_Page_Objects.Stationcollapse.click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		Suggest_Station_Detail_Page_Objects.Stationcollapse.click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		Suggest_Station_Detail_Page_Objects.Contactcollapse.click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		Suggest_Station_Detail_Page_Objects.Contactcollapse.click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority = 4)
@@ -128,7 +138,7 @@ public class Suggest_Station_Detail extends CommonFunctions{
 		Suggest_Station_Detail_Page_Objects.Address2.sendKeys(getExcelData("SStationDetail", 1, 9));
 		Thread.sleep(2000);
 		
-		Suggest_Station_Detail_Page_Objects.County.sendKeys(getExcelData("SStationDetail", 1, 10));
+		Suggest_Station_Detail_Page_Objects.Country.sendKeys(getExcelData("SStationDetail", 1, 10));
 		Thread.sleep(2000);
 		
 		Suggest_Station_Detail_Page_Objects.State.sendKeys(getExcelData("SStationDetail", 1, 11));
@@ -140,7 +150,7 @@ public class Suggest_Station_Detail extends CommonFunctions{
 		Suggest_Station_Detail_Page_Objects.Pincode.sendKeys(getExcelData("SStationDetail", 1, 13));
 		Thread.sleep(2000);
 		
-		Suggest_Station_Detail_Page_Objects.CompanyDes.sendKeys(getExcelData("SStationDetail", 1, 14));
+		Suggest_Station_Detail_Page_Objects.WriteUp.sendKeys(getExcelData("SStationDetail", 1, 14));
 		Thread.sleep(2000);
 		
 		Suggest_Station_Detail_Page_Objects.Submitbtn.click();
@@ -250,7 +260,7 @@ public class Suggest_Station_Detail extends CommonFunctions{
 		Suggest_Station_Detail_Page_Objects.Address2.sendKeys(getExcelData("SStationDetail", 2, 9));
 		Thread.sleep(2000);
 
-		Suggest_Station_Detail_Page_Objects.County.sendKeys(getExcelData("SStationDetail", 2, 10));
+		Suggest_Station_Detail_Page_Objects.Country.sendKeys(getExcelData("SStationDetail", 2, 10));
 		Thread.sleep(2000);
 	
 		Suggest_Station_Detail_Page_Objects.State.sendKeys(getExcelData("SStationDetail", 2, 11));
@@ -265,10 +275,10 @@ public class Suggest_Station_Detail extends CommonFunctions{
 		Suggest_Station_Detail_Page_Objects.Pincode.sendKeys(getExcelData("SStationDetail", 2, 13));
 		Thread.sleep(2000);
 		
-		Suggest_Station_Detail_Page_Objects.CompanyDes.clear();
+		Suggest_Station_Detail_Page_Objects.WriteUp.clear();
 		Thread.sleep(2000);
 		
-		Suggest_Station_Detail_Page_Objects.CompanyDes.sendKeys(getExcelData("SStationDetail", 2, 14));
+		Suggest_Station_Detail_Page_Objects.WriteUp.sendKeys(getExcelData("SStationDetail", 2, 14));
 		Thread.sleep(2000);
 		
 		Suggest_Station_Detail_Page_Objects.Submitbtn.click();
@@ -278,13 +288,11 @@ public class Suggest_Station_Detail extends CommonFunctions{
 		Thread.sleep(2000);
 		
 		Suggest_Station_Detail_Page_Objects.Okbtn.click();
-		Thread.sleep(2000);
-	
-	}
-	
+		Thread.sleep(2000);	
+	}	
 
 	@Test(priority = 7)
-	public void VerifyEditStationList() throws Throwable
+	public void VerifyEditedStation() throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Edited Station in Listing");
 		
@@ -325,8 +333,23 @@ public class Suggest_Station_Detail extends CommonFunctions{
 	@Test(priority = 8)
 	public void ClickDelete () throws Throwable
 	{
-		extenttestCase.log(Status.INFO,"Verifying Delete Record");
+		extenttestCase.log(Status.INFO,"Deleting a Record");
 		
+		driver.navigate().refresh();
+		Suggest_Station_List_Page_Objects.SearchField.clear();
+		Thread.sleep(5000);
+		
+		Suggest_Station_List_Page_Objects.SearchSelect.sendKeys(getExcelData("SStationList", 3, 0));
+		Thread.sleep(2000);
+		Suggest_Station_List_Page_Objects.SearchSelect.sendKeys(getExcelData("SStationList", 2, 0));
+		Thread.sleep(2000);
+
+		Suggest_Station_List_Page_Objects.SearchField.sendKeys(getExcelData("SStationList", 6, 1));
+		Thread.sleep(2000);
+		
+		Suggest_Station_List_Page_Objects.SelectStatus.sendKeys(getExcelData("SStationList", 6, 2));
+		Thread.sleep(2000);
+
 		Suggest_Station_List_Page_Objects.Checkbox.click();
 		Thread.sleep(2000);
 		
@@ -353,13 +376,19 @@ public class Suggest_Station_Detail extends CommonFunctions{
 	@Test(priority = 9)
 	public void VerifyDelete() throws Throwable
 	{
-		
+		driver.navigate().refresh();
+		Thread.sleep(5000);
 		Suggest_Station_List_Page_Objects.SearchField.clear();
 		Thread.sleep(2000);
 		
+		Suggest_Station_List_Page_Objects.SearchSelect.sendKeys(getExcelData("SStationList", 3, 0));
+		Thread.sleep(2000);
+		Suggest_Station_List_Page_Objects.SearchSelect.sendKeys(getExcelData("SStationList", 2, 0));
+		Thread.sleep(2000);		
+
 		Suggest_Station_List_Page_Objects.SearchField.sendKeys(getExcelData("SStationList", 6, 1));
 		Thread.sleep(2000);
-
+		
 		String ListWarn =  Suggest_Station_List_Page_Objects.ListWarn.getText();
 		System.out.println(ListWarn);
 		Thread.sleep(2000);
@@ -376,7 +405,7 @@ public class Suggest_Station_Detail extends CommonFunctions{
 		driver.navigate().refresh();
 	}
 	
-	@Test(priority = 10)
+	//@Test(priority = 10)
 	public void Signout() throws InterruptedException
 	{
 		extenttestCase.log(Status.INFO,"Verifying SingOut from Admin Role");

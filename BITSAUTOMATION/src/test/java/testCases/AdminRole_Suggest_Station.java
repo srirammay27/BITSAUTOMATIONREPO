@@ -24,7 +24,7 @@ import pageObjects.Suggest_Station_Page_Objects;
 
 import org.openqa.selenium.support.ui.Select;
 
-public class Suggest_Station extends CommonFunctions
+public class AdminRole_Suggest_Station extends CommonFunctions
 {
 	static Logger logger=Logger.getLogger(Edit_Profile.class);
 	String strPageTitle=""; 
