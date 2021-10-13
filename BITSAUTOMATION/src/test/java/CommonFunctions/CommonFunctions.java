@@ -33,7 +33,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class CommonFunctions{
-
+//
 	public static WebDriver driver = null; 
 	public static Properties properties = null;
 	public static ExtentReports extentReport;
