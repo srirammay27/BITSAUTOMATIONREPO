@@ -13,10 +13,13 @@ public class Suggest_Station_Detail_Page_Objects {
 	@FindBy(xpath="/html/body/app-root/app-layout/app-manage-station/div/div[1]/div/div/div[2]/div/button")
 	public static WebElement AddStation;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[2]/div/form/div/div[3]/div/div/button[2]")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[2]/div/form/div/div[3]/div/div/button[3]")
 	public static WebElement Submitbtn;
-
+	
 	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[2]/div/form/div/div[3]/div/div/button[1]")
+	public static WebElement Backbtn;
+
+	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[2]/div/form/div/div[3]/div/div/button[2]")
 	public static WebElement Cancelbtn;
 	
 	@FindBy(xpath="//*[@id=\"modal\"]/div/div/div[3]/button[1]")
@@ -69,7 +72,7 @@ public class Suggest_Station_Detail_Page_Objects {
 	public static WebElement Address2;
 	
 	@FindBy(xpath="//*[@id=\"contact\"]/div/div[2]/div[2]/div/select")
-	public static WebElement County;
+	public static WebElement Country;
 	
 	@FindBy(xpath="//*[@id=\"contact\"]/div/div[2]/div[3]/div/select")
 	public static WebElement State;
@@ -81,7 +84,7 @@ public class Suggest_Station_Detail_Page_Objects {
 	public static WebElement Pincode;
 	
 	@FindBy(xpath="//*[@id=\"contact\"]/div/div[3]/div[3]/div/app-quill-editor/quill-editor/div[2]/div[1]/p")
-	public static WebElement CompanyDes;
+	public static WebElement WriteUp;
 	
 	////////////////////////////////////// Edit Faculty ///////////////////////////////////////////////
 	
