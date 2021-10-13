@@ -2,19 +2,67 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="BITS Automation" verbose="2">
 
-	 <test name="Faculty Login">
+	 <test name="Login">
 		<classes>
 			<class name="testCases.Login">
 			</class>
 		</classes>
 	</test> 
-	<test name="Faculty Profile">
+	 <!--<test name="Manage Faculty List - Admin Role">
+		<classes>
+			<class name="testCases.AdminRole_ManageFaculty_List">
+			</class>
+		</classes>
+			</test> 
+	  	<test name="Manage Faculty Detail - Admin Role">
+		<classes>
+			<class name="testCases.AdminRole_ManageFaculty_Detail">
+			</class>
+		</classes>
+			</test> 
+			<test name="Manage Student Data List - Admin Role">
+		<classes>
+			<class name="testCases.AdminRole_Student_Data_List">
+			</class>
+		</classes>
+			</test>
+			<test name="Manage Student Profile Detail - Admin Role">
+		<classes>
+			<class name="testCases.AdminRole_Student_Profile_Detail">
+			</class>
+		</classes>
+			</test>
+			<test name="Student Course Test Cases - Admin Role">
+		<classes>
+			<class name="testCases.AdminRole_Student_Course_List">
+			</class>
+		</classes>
+	</test>
+	<test name="Suggest Station List - Admin Role">
+		<classes>
+			<class name="testCases.AdminRole_Suggest_Station_List">
+			</class>
+		</classes>
+	</test>
+	<test name="Suggest Station Detail - Admin Role">
+		<classes>
+			<class name="testCases.AdminRole_Suggest_Station_Detail">
+			</class>
+		</classes>
+	</test>-->
+	<test name="DashBoard - Admin Role">
+		<classes>
+			<class name="testCases.AdminRole_Dashboard">
+			</class>
+		</classes>
+	</test>
+	<!--<test name="Faculty Profile">
 		<classes>
 			<class name="testCases.Edit_Profile">
 			</class>
 		</classes>
 	</test> 
-	<!-- <test name="Suggest Station List">
+	 <test name="Suggest Station List">
 		<classes>
 			<class name="testCases.Faculty_Suggest_Station_List">
 			</class>
@@ -192,6 +240,6 @@
 			<class name="testCases.StudentRoleSem_Allot_List">
 			</class>
 		</classes>
-	</test>
-	-->
+	</test> -->
+	
 	</suite>
