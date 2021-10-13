@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class ManageFaculty_List_Page_Objects {
 
-	@FindBy(xpath="//*[@id='collapsibleNavbar']/ul/li[4]/a")
+	@FindBy(xpath="//*[@id='collapsibleNavbar']/ul/li[5]/a")
 	public static WebElement MFMenu;
 
 	///////////////// List Grid Sort //////////////////////////////////////////////////////
@@ -22,9 +22,12 @@ public class ManageFaculty_List_Page_Objects {
 
 	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-list/div/div[2]/div/div[3]/table/thead/tr/th[5]/em")
 	public static WebElement SortCampus;
-
+	
 	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-list/div/div[2]/div/div[3]/table/thead/tr/th[6]/em")
-	public static WebElement SortFType;
+	public static WebElement SortAreaSpclzn;
+
+	//@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-list/div/div[2]/div/div[3]/table/thead/tr/th[7]/em")
+	//public static WebElement SortFType;
 
 	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-list/div/div[2]/div/div[3]/table/thead/tr/th[7]/em")
 	public static WebElement SortStatus;
@@ -68,7 +71,7 @@ public class ManageFaculty_List_Page_Objects {
 	@FindBy(xpath="//*[@id=\"importFile\"]")
 	public static WebElement ChooseFile;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-upload/div/div[2]/div/div/div[4]/div[1]/div/div[2]/a")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-upload/div/div[2]/div/div/div[4]/div[1]/div/div[3]/a")	
 	public static WebElement Refresh;
 
 	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-upload/div/div[2]/div/div/div[4]/div[1]/div/div[1]/a")

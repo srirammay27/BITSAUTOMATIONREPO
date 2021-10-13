@@ -45,7 +45,8 @@ public class Student_Course_List_Page_Objects {
 	@FindBy(xpath="/html/body/app-root/app-layout/app-student-course/div/div[2]/div/div[1]/div/div[1]/div/div[1]/div/select")
 	public static WebElement SearchSelect;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-student-course/div/div[2]/div/div[3]/table/tbody/tr[1]/td[3]")
+	//@FindBy(xpath="/html/body/app-root/app-layout/app-student-course/div/div[2]/div/div[3]/table/tbody/tr[1]/td[3]")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-course/div/div[2]/div/div[3]/table/tbody/tr[1]/td[9]")
 	public static WebElement StudentResult;
 
 	@FindBy(xpath="/html/body/app-root/app-layout/app-student-course/div/div[2]/div/div[3]/table/tbody/tr[1]/td[9]")
@@ -62,7 +63,7 @@ public class Student_Course_List_Page_Objects {
 	@FindBy(xpath="/html/body/app-root/app-layout/app-student-course-upload/div/div[2]/div/div/div[2]/div/button[1]")
 	public static WebElement CancelUpload;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-student-course-upload/div/div[2]/div/div/div[2]/div/button[2]")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-course-upload/div/div[2]/div/div/div[2]/div/button[3]")
 	public static WebElement UploadFile;
 
 	@FindBy(xpath="/html/body/app-root/app-layout/app-student-course-upload/div/div[2]/div/div/div[1]/div/div/div[2]")

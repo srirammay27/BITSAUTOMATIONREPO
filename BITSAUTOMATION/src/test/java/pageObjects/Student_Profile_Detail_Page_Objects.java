@@ -7,6 +7,42 @@ public class Student_Profile_Detail_Page_Objects {
 
 	@FindBy(xpath="//*[@id=\"collapsibleNavbar\"]/ul/li[2]/a")
 	public static WebElement ProfileMenu;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-profile/div/div[2]/div/div/div[1]/div[2]/div/div[1]/div/input")
+	public static WebElement StudentName;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-profile/div/div[2]/div/div/div[1]/div[2]/div/div[2]/div/input")
+	public static WebElement CampusId;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-profile/div/div[2]/div/div/div[1]/div[2]/div/div[3]/div/select")
+	public static WebElement Gender;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-profile/div/div[2]/div/div/div[1]/div[2]/div/div[4]/div/input")
+	public static WebElement BitsEmailId;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-profile/div/div[2]/div/div/div[1]/div[2]/div/div[5]/div/input")
+	public static WebElement Tag;
+
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-profile/div/div[2]/div/div/div[1]/div[2]/div/div[6]/div/input")
+	public static WebElement DisciplineMinor;
+	
+	@FindBy(xpath="//*[@id=\"cgpa\"]")
+	public static WebElement CGPA;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-profile/div/div[2]/div/div/div[1]/div[2]/div/div[9]/div/select")
+	public static WebElement DegreeType;
+	
+	@FindBy(xpath="//*[@id=\"pendingCourses\"]")
+	public static WebElement PendingCourses;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-profile/div/div[2]/div/div/div[1]/div[2]/div/div[11]/div/div/div[1]/label/input")
+	public static WebElement RFirstSemester;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-profile/div/div[2]/div/div/div[1]/div[2]/div/div[11]/div/div/div[2]/label/input")
+	public static WebElement RSecondSemester;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-profile/div/div[2]/div/div/div[1]/div[2]/div/div[11]/div/div/div[3]/label/input")
+	public static WebElement RBothSemester;
 
 	///////////////////////////////////////// Upload Photo ////////////////////////////////////////////////
 

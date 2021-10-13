@@ -10,6 +10,9 @@ public class Student_Data_List_Page_Objects {
 
 	@FindBy(xpath="//*[@id=\"collapsibleNavbar\"]/ul/li[3]/div/a[1]")
 	public static WebElement SDMenu;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-list/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[2]/a")
+	public static WebElement GridRow1;
 
 	///////////////// List Grid Sort //////////////////////////////////////////////////////
 
@@ -74,7 +77,7 @@ public class Student_Data_List_Page_Objects {
 	@FindBy(xpath="//*[@id=\"importFile\"]")
 	public static WebElement ChooseFile;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-student-upload/div/div[2]/div/div/div[4]/div[1]/div/div[2]/a")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-student-upload/div/div[2]/div/div/div[4]/div[1]/div/div[3]/a")
 	public static WebElement Refresh;
 
 	@FindBy(xpath="/html/body/app-root/app-layout/app-student-upload/div/div[2]/div/div/div[4]/div[1]/div/div[1]/a")
