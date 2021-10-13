@@ -1,296 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="17" passed="13" failed="3" skipped="0">
+<testng-results ignored="1" total="30" passed="29" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-08-25T20:37:10 IST" name="BITS Automation" finished-at="2021-08-25T20:40:56 IST" duration-ms="225630">
+  <suite started-at="2021-10-13T10:52:50 IST" name="BITS Automation" finished-at="2021-10-13T10:55:05 IST" duration-ms="135798">
     <groups>
     </groups>
-    <test started-at="2021-08-25T20:37:10 IST" name="Faculty Login" finished-at="2021-08-25T20:37:31 IST" duration-ms="20895">
+    <test started-at="2021-10-13T10:52:50 IST" name="Login" finished-at="2021-10-13T10:53:13 IST" duration-ms="23368">
       <class name="testCases.Login">
-        <test-method signature="ValidUserandinvalidPass()[pri:0, instance:testCases.Login@6d4d66d2]" started-at="2021-08-25T20:37:10 IST" name="ValidUserandinvalidPass" finished-at="2021-08-25T20:37:10 IST" duration-ms="47" status="PASS">
+        <test-method signature="ValidUserandinvalidPass()[pri:0, instance:testCases.Login@2a265ea9]" started-at="2021-10-13T10:52:50 IST" name="ValidUserandinvalidPass" finished-at="2021-10-13T10:52:50 IST" duration-ms="43" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidUserandinvalidPass -->
-        <test-method signature="invalidUserIdandPassword()[pri:1, instance:testCases.Login@6d4d66d2]" started-at="2021-08-25T20:37:10 IST" name="invalidUserIdandPassword" finished-at="2021-08-25T20:37:24 IST" duration-ms="13439" status="PASS">
+        <test-method signature="InvalidUserIdandPassword()[pri:1, instance:testCases.Login@2a265ea9]" started-at="2021-10-13T10:52:50 IST" name="InvalidUserIdandPassword" finished-at="2021-10-13T10:53:01 IST" duration-ms="11686" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidUserIdandPassword -->
-        <test-method signature="ValidUserIdandPassword()[pri:2, instance:testCases.Login@6d4d66d2]" started-at="2021-08-25T20:37:24 IST" name="ValidUserIdandPassword" finished-at="2021-08-25T20:37:31 IST" duration-ms="7369" status="PASS">
+        </test-method> <!-- InvalidUserIdandPassword -->
+        <test-method signature="ValidUserIdandPassword()[pri:2, instance:testCases.Login@2a265ea9]" started-at="2021-10-13T10:53:01 IST" name="ValidUserIdandPassword" finished-at="2021-10-13T10:53:13 IST" duration-ms="11597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidUserIdandPassword -->
       </class> <!-- testCases.Login -->
-    </test> <!-- Faculty Login -->
-    <test started-at="2021-08-25T20:37:31 IST" name="Faculty Profile" finished-at="2021-08-25T20:40:56 IST" duration-ms="204704">
-      <class name="testCases.Edit_Profile">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:36:58 IST" name="launchBrowser" finished-at="2021-08-25T20:37:10 IST" duration-ms="11851" status="PASS">
+    </test> <!-- Login -->
+    <test started-at="2021-10-13T10:53:13 IST" name="DashBoard - Admin Role" finished-at="2021-10-13T10:55:05 IST" duration-ms="112398">
+      <class name="testCases.AdminRole_Dashboard">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:52:42 IST" name="launchBrowser" finished-at="2021-10-13T10:52:50 IST" duration-ms="7271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="validateNavigatetoProfile()[pri:0, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:37:31 IST" name="validateNavigatetoProfile" finished-at="2021-08-25T20:37:36 IST" duration-ms="5070" status="PASS">
+        <test-method signature="ClickRecord()[pri:0, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:13 IST" name="ClickRecord" finished-at="2021-10-13T10:53:18 IST" duration-ms="4886" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateNavigatetoProfile -->
-        <test-method signature="validateBreadCrumbs()[pri:1, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:37:36 IST" name="validateBreadCrumbs" finished-at="2021-08-25T20:37:36 IST" duration-ms="57" status="PASS">
+        </test-method> <!-- ClickRecord -->
+        <test-method signature="VerifyDashboardpage()[pri:1, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:18 IST" name="VerifyDashboardpage" finished-at="2021-10-13T10:53:22 IST" duration-ms="4081" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateBreadCrumbs -->
-        <test-method signature="validateCancelBtn()[pri:2, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:37:36 IST" name="validateCancelBtn" finished-at="2021-08-25T20:37:41 IST" duration-ms="5102" status="PASS">
+        </test-method> <!-- VerifyDashboardpage -->
+        <test-method signature="VerifyPracticeSchool()[pri:2, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:22 IST" name="VerifyPracticeSchool" finished-at="2021-10-13T10:53:26 IST" duration-ms="4223" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCancelBtn -->
-        <test-method signature="validateCloseBtnPopup()[pri:3, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:37:41 IST" name="validateCloseBtnPopup" finished-at="2021-08-25T20:37:47 IST" duration-ms="5128" status="PASS">
+        </test-method> <!-- VerifyPracticeSchool -->
+        <test-method signature="VerifySemester()[pri:3, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:26 IST" name="VerifySemester" finished-at="2021-10-13T10:53:30 IST" duration-ms="4196" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCloseBtnPopup -->
-        <test-method signature="validateOkayBtnPopup()[pri:4, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:37:47 IST" name="validateOkayBtnPopup" finished-at="2021-08-25T20:37:56 IST" duration-ms="9223" status="PASS">
+        </test-method> <!-- VerifySemester -->
+        <test-method signature="VerifyCurrentBatch()[pri:4, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:30 IST" name="VerifyCurrentBatch" finished-at="2021-10-13T10:53:35 IST" duration-ms="4187" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateOkayBtnPopup -->
-        <test-method signature="validateNavigatetoProfile1()[pri:5, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:37:56 IST" name="validateNavigatetoProfile1" finished-at="2021-08-25T20:38:01 IST" duration-ms="5079" status="PASS">
+        </test-method> <!-- VerifyCurrentBatch -->
+        <test-method signature="VerifyTotalStudents()[pri:5, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:35 IST" name="VerifyTotalStudents" finished-at="2021-10-13T10:53:39 IST" duration-ms="4144" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateNavigatetoProfile1 -->
-        <test-method signature="validateSaveBtnWithoutChngs()[pri:6, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:38:01 IST" name="validateSaveBtnWithoutChngs" finished-at="2021-08-25T20:38:06 IST" duration-ms="5110" status="PASS">
+        </test-method> <!-- VerifyTotalStudents -->
+        <test-method signature="VerifyAllottedStudents()[pri:7, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:39 IST" name="VerifyAllottedStudents" finished-at="2021-10-13T10:53:43 IST" duration-ms="4153" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateSaveBtnWithoutChngs -->
-        <test-method signature="validateSaveBtnWithChngs()[pri:7, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:38:06 IST" name="validateSaveBtnWithChngs" finished-at="2021-08-25T20:38:58 IST" duration-ms="51818" status="PASS">
+        </test-method> <!-- VerifyAllottedStudents -->
+        <test-method signature="VerifyAllottedOrganizations()[pri:8, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:43 IST" name="VerifyAllottedOrganizations" finished-at="2021-10-13T10:53:47 IST" duration-ms="4166" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateSaveBtnWithChngs -->
-        <test-method signature="validateChangeOffclEmailId()[pri:8, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:38:58 IST" name="validateChangeOffclEmailId" finished-at="2021-08-25T20:39:32 IST" duration-ms="33880" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".toast-message"}
-  (Session info: chrome=92.0.4515.131)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PIL-D-O-15-009', ip: '192.168.3.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\rajeev_m\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 08f23a3586c4ca3afb67ee2841be9063
-*** Element info: {Using=css selector, value=.toast-message}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".toast-message"}
-  (Session info: chrome=92.0.4515.131)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PIL-D-O-15-009', ip: '192.168.3.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\rajeev_m\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 08f23a3586c4ca3afb67ee2841be9063
-*** Element info: {Using=css selector, value=.toast-message}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at testCases.Edit_Profile.validateChangeOffclEmailId(Edit_Profile.java:205)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- VerifyAllottedOrganizations -->
+        <test-method signature="VerifyOrganizationsAnnounced()[pri:9, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:47 IST" name="VerifyOrganizationsAnnounced" finished-at="2021-10-13T10:53:51 IST" duration-ms="4115" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateChangeOffclEmailId -->
-        <test-method signature="validateRemoveGroupLeader()[pri:9, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:39:32 IST" name="validateRemoveGroupLeader" finished-at="2021-08-25T20:39:32 IST" duration-ms="37" status="PASS">
+        </test-method> <!-- VerifyOrganizationsAnnounced -->
+        <test-method signature="VerifyCoreDiscipline()[pri:10, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:51 IST" name="VerifyCoreDiscipline" finished-at="2021-10-13T10:53:55 IST" duration-ms="4111" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateRemoveGroupLeader -->
-        <test-method signature="validateAssignGroupLeader()[pri:10, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:39:32 IST" name="validateAssignGroupLeader" finished-at="2021-08-25T20:40:05 IST" duration-ms="33287" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".toast-message"}
-  (Session info: chrome=92.0.4515.131)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PIL-D-O-15-009', ip: '192.168.3.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\rajeev_m\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 08f23a3586c4ca3afb67ee2841be9063
-*** Element info: {Using=css selector, value=.toast-message}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".toast-message"}
-  (Session info: chrome=92.0.4515.131)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PIL-D-O-15-009', ip: '192.168.3.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\rajeev_m\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 08f23a3586c4ca3afb67ee2841be9063
-*** Element info: {Using=css selector, value=.toast-message}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at testCases.Edit_Profile.validateAssignGroupLeader(Edit_Profile.java:264)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- VerifyCoreDiscipline -->
+        <test-method signature="VerifyNonCoreDiscipline()[pri:11, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:55 IST" name="VerifyNonCoreDiscipline" finished-at="2021-10-13T10:53:59 IST" duration-ms="4151" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateAssignGroupLeader -->
-        <test-method signature="validateGroupLeaderFail()[pri:11, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:40:05 IST" name="validateGroupLeaderFail" finished-at="2021-08-25T20:40:40 IST" duration-ms="34908" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".toast-message"}
-  (Session info: chrome=92.0.4515.131)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PIL-D-O-15-009', ip: '192.168.3.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\rajeev_m\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 08f23a3586c4ca3afb67ee2841be9063
-*** Element info: {Using=css selector, value=.toast-message}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".toast-message"}
-  (Session info: chrome=92.0.4515.131)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PIL-D-O-15-009', ip: '192.168.3.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\rajeev_m\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56455}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 08f23a3586c4ca3afb67ee2841be9063
-*** Element info: {Using=css selector, value=.toast-message}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at testCases.Edit_Profile.validateGroupLeaderFail(Edit_Profile.java:299)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- VerifyNonCoreDiscipline -->
+        <test-method signature="VerifyTop5Preferences()[pri:12, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:53:59 IST" name="VerifyTop5Preferences" finished-at="2021-10-13T10:54:03 IST" duration-ms="4097" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateGroupLeaderFail -->
-        <test-method signature="validateMandatoryFields()[pri:12, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:40:40 IST" name="validateMandatoryFields" finished-at="2021-08-25T20:40:56 IST" duration-ms="15976" status="PASS">
+        </test-method> <!-- VerifyTop5Preferences -->
+        <test-method signature="VerifyStationsParticipated()[pri:13, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:04 IST" name="VerifyStationsParticipated" finished-at="2021-10-13T10:54:08 IST" duration-ms="4104" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateMandatoryFields -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.Edit_Profile@48075da3]" started-at="2021-08-25T20:40:56 IST" name="tearDown" finished-at="2021-08-25T20:40:58 IST" duration-ms="2311" status="PASS">
+        </test-method> <!-- VerifyStationsParticipated -->
+        <test-method signature="VerifyAnnouncedStations()[pri:14, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:08 IST" name="VerifyAnnouncedStations" finished-at="2021-10-13T10:54:12 IST" duration-ms="4123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAnnouncedStations -->
+        <test-method signature="VerifyStationsAllotted()[pri:15, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:12 IST" name="VerifyStationsAllotted" finished-at="2021-10-13T10:54:16 IST" duration-ms="4156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyStationsAllotted -->
+        <test-method signature="VerifyTotalRequirements()[pri:16, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:16 IST" name="VerifyTotalRequirements" finished-at="2021-10-13T10:54:20 IST" duration-ms="4153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTotalRequirements -->
+        <test-method signature="VerifyTotalAllotted()[pri:17, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:20 IST" name="VerifyTotalAllotted" finished-at="2021-10-13T10:54:24 IST" duration-ms="4130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTotalAllotted -->
+        <test-method signature="VerifyStipendHighest()[pri:18, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:24 IST" name="VerifyStipendHighest" finished-at="2021-10-13T10:54:30 IST" duration-ms="6216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyStipendHighest -->
+        <test-method signature="VerifyStipendAverage()[pri:19, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:30 IST" name="VerifyStipendAverage" finished-at="2021-10-13T10:54:34 IST" duration-ms="4088" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyStipendAverage -->
+        <test-method signature="VerifyStipendMedian()[pri:19, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:34 IST" name="VerifyStipendMedian" finished-at="2021-10-13T10:54:39 IST" duration-ms="4105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyStipendMedian -->
+        <test-method signature="VerifyStipendLowest()[pri:20, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:39 IST" name="VerifyStipendLowest" finished-at="2021-10-13T10:54:43 IST" duration-ms="4080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyStipendLowest -->
+        <test-method signature="VerifyFacultyTotal()[pri:21, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:43 IST" name="VerifyFacultyTotal" finished-at="2021-10-13T10:54:49 IST" duration-ms="6200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyFacultyTotal -->
+        <test-method signature="VerifyFacultyOnCampus()[pri:22, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:49 IST" name="VerifyFacultyOnCampus" finished-at="2021-10-13T10:54:53 IST" duration-ms="4122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyFacultyOnCampus -->
+        <test-method signature="VerifyFacultyOffCampus()[pri:23, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:53 IST" name="VerifyFacultyOffCampus" finished-at="2021-10-13T10:54:57 IST" duration-ms="4117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyFacultyOffCampus -->
+        <test-method signature="VerifyFacultyAllotted()[pri:24, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:54:57 IST" name="VerifyFacultyAllotted" finished-at="2021-10-13T10:55:01 IST" duration-ms="4112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyFacultyAllotted -->
+        <test-method signature="VerifyFacultyAvailable()[pri:25, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:55:01 IST" name="VerifyFacultyAvailable" finished-at="2021-10-13T10:55:05 IST" duration-ms="4098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyFacultyAvailable -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.AdminRole_Dashboard@5524cca1]" started-at="2021-10-13T10:55:05 IST" name="tearDown" finished-at="2021-10-13T10:55:08 IST" duration-ms="2359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.Edit_Profile -->
-    </test> <!-- Faculty Profile -->
+      </class> <!-- testCases.AdminRole_Dashboard -->
+    </test> <!-- DashBoard - Admin Role -->
   </suite> <!-- BITS Automation -->
 </testng-results>

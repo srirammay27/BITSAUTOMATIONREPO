@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [BITS Automation]" guice-stage="DEVELOPMENT" verbose="2">
-  <test thread-count="5" name="Faculty Profile(failed)" verbose="2">
+  <test thread-count="5" name="DashBoard - Admin Role(failed)" verbose="2">
     <classes>
-      <class name="testCases.Edit_Profile">
+      <class name="testCases.AdminRole_Dashboard">
         <methods>
+          <include name="VerifyStipendLowest"/>
           <include name="tearDown"/>
-          <include name="validateAssignGroupLeader"/>
+          <include name="VerifyStipendAverage"/>
+          <include name="VerifyFacultyOffCampus"/>
+          <include name="VerifyFacultyOnCampus"/>
+          <include name="VerifyStipendHighest"/>
+          <include name="VerifyStipendMedian"/>
+          <include name="VerifyFacultyAllotted"/>
+          <include name="VerifyFacultyAvailable"/>
+          <include name="VerifyFacultyTotal"/>
           <include name="launchBrowser"/>
-          <include name="validateChangeOffclEmailId"/>
-          <include name="validateGroupLeaderFail"/>
+          <include name="VerifyTotalAllotted"/>
         </methods>
-      </class> <!-- testCases.Edit_Profile -->
+      </class> <!-- testCases.AdminRole_Dashboard -->
     </classes>
-  </test> <!-- Faculty Profile(failed) -->
+  </test> <!-- DashBoard - Admin Role(failed) -->
 </suite> <!-- Failed suite [BITS Automation] -->
