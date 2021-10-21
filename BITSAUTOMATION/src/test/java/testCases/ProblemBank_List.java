@@ -257,18 +257,49 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 		}		
 		Thread.sleep(3000);
 		
-		Problem_Bank_List_Objects.SearchPSType.sendKeys(getExcelData("PBankList", 9, 1));
-		Thread.sleep(3000);			
+		Problem_Bank_List_Objects.SearchPSBatch.sendKeys(getExcelData("PBankList", 9, 1));
+		Thread.sleep(3000);		
 		
+		WarningMsg=Problem_Bank_List_Objects.ListWarn.getText().toString();
 		
-		if(WarningMsg.contentEquals(getExcelData("PBankList", 2, 3)))
+		if(WarningMsg.contentEquals("Record(s) not found"))
 		{
-			extenttestCase.log(Status.PASS, "PS Type (PS II) Validation Done Successfully");
+			extenttestCase.log(Status.PASS, "The selected batch does not have records");
 		}
 		else
 		{
-			extenttestCase.log(Status.FAIL, "PS Type Validation Failed");
-		}
+			extenttestCase.log(Status.FAIL, "Batch validation failed");
+		}		
 		Thread.sleep(3000);
-	}
+
+		Problem_Bank_List_Objects.SearchPSBatch.sendKeys(getExcelData("PBankList", 10, 1));
+		Thread.sleep(3000);		
+		
+		WarningMsg=Problem_Bank_List_Objects.ListWarn.getText().toString();
+		
+		if(WarningMsg.contentEquals("Record(s) not found"))
+		{
+			extenttestCase.log(Status.PASS, "The selected batch does not have records");
+		}
+		else
+		{
+			extenttestCase.log(Status.FAIL, "Batch validation failed");
+		}		
+		Thread.sleep(3000);
+
+		Problem_Bank_List_Objects.SearchPSBatch.sendKeys(getExcelData("PBankList", 11, 1));
+		Thread.sleep(3000);		
+		
+		WarningMsg=Problem_Bank_List_Objects.ListWarn.getText().toString();
+		
+		if(WarningMsg.contentEquals("Record(s) not found"))
+		{
+			extenttestCase.log(Status.PASS, "The selected batch does not have records");
+		}
+		else
+		{
+			extenttestCase.log(Status.FAIL, "Batch validation failed");
+		}		
+		Thread.sleep(3000);
+		}
 }
