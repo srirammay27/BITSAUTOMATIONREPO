@@ -3,7 +3,7 @@
 <suite name="BITS Automation" verbose="2">
 
 	 <test name="Login">
-		<classes>
+		<classes> 
 			<class name="testCases.Login">
 			</class>
 		</classes>
@@ -49,19 +49,44 @@
 			<class name="testCases.AdminRole_Suggest_Station_Detail">
 			</class>
 		</classes>
-	</test>-->
+	</test>
 	<test name="DashBoard - Admin Role">
 		<classes>
 			<class name="testCases.AdminRole_Dashboard">
 			</class>
 		</classes>
 	</test>
-	<!--<test name="Faculty Profile">
+	<test name="Edit Profile - Faculty Role">
 		<classes>
-			<class name="testCases.Edit_Profile">
+			<class name="testCases.FacultyRole_EditProfile">
+			</class>
+		</classes>
+	</test>
+	<test name="Suggest Station List - Faculty Role">
+		<classes>
+			<class name="testCases.FacultyRole_Suggest_Station_List">
 			</class>
 		</classes>
 	</test> 
+	<test name="Suggest Station Detail - Faculty Role">
+		<classes>
+			<class name="testCases.FacultyRole_Suggest_Station_Detail">
+			</class>
+		</classes>
+	</test>-->
+	<test name="Problem Bank List - Faculty Role">
+		<classes>
+			<class name="testCases.ProblemBank_List">
+			</class>
+		</classes>
+	</test>
+	<!--<test name="Logout">
+		<classes>
+			<class name="testCases.Logout">
+			</class>
+		</classes>
+	</test> -->
+	<!--
 	 <test name="Suggest Station List">
 		<classes>
 			<class name="testCases.Faculty_Suggest_Station_List">

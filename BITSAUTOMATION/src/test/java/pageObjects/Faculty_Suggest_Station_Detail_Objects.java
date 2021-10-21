@@ -19,13 +19,16 @@ public class Faculty_Suggest_Station_Detail_Objects {
 	@FindBy(xpath="/html/body/app-root/app-layout/app-manage-station/div/div[1]/div/div/div[2]/div/button")
 	public static WebElement btnAddStation;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[2]/div/form/div/div[3]/div/div/button[2]")
-	       
+	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[2]/div/form/div/div[3]/div/div/button[3]")
 	public static WebElement btnSubmit;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[2]/div/form/div/div[3]/div/div/button[1]")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[2]/div/form/div/div[3]/div/div/button[2]")
 	public static WebElement btnCancel;
 	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[2]/div/form/div/div[3]/div/div/button[1]")
+	public static WebElement btnBack;
+	
+	//@FindBy(xpath="//*[@id=\"modal\"]/div/div/div[3]/button[1]")
 	@FindBy(xpath="//*[@id=\"modal\"]/div/div/div[3]/button[1]")
 	public static WebElement btnClose;
 	

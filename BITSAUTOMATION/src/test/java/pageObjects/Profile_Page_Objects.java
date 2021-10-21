@@ -39,7 +39,7 @@ public class Profile_Page_Objects {
 	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[7]/div/input")
 	public static WebElement fldPrsnlEmail;
 	
-	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[8]/div/input")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[8]/div/input")	               
 	public static WebElement fldOffclEmail;	
 	
 	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[9]/div/input")
@@ -72,12 +72,28 @@ public class Profile_Page_Objects {
 	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[17]/div/input")
 	public static WebElement fldPin;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[18]/div/td/div/label/input")
+	//@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[18]/div/td/div/label/input")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[18]/div/div/label/input")
 	public static WebElement fldGrpLeader;
 	
 	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[1]/div/div/div/nav/ol/li[2]")
 	public static WebElement brdCrumbs;	
 	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div\r\n")
+	public static WebElement Pageclick;	
+	
 	@FindBy(xpath="//*[@id=\"toast-container\"]")
 	public static WebElement toaster;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[8]/div/div")
+	public static WebElement InvalidEmail;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[17]/div/div")
+	public static WebElement InvalidPIN;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[9]/div/div")
+	public static WebElement InvalidMob;
+	
+	@FindBy(xpath="/html/body/app-root/app-layout/app-faculty-profile/div/div[2]/div/div/div[1]/div[10]/div/div")
+	public static WebElement InvalidLanline;
 }

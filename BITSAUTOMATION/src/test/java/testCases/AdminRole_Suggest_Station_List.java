@@ -315,10 +315,10 @@ public class AdminRole_Suggest_Station_List extends CommonFunctions{
 		}		
 		Thread.sleep(3000);
 		
-		Suggest_Station_List_Page_Objects.SelectStatus.sendKeys(getExcelData("SStationList", 20, 1));
+		Suggest_Station_List_Page_Objects.SearchPSType.sendKeys(getExcelData("SStationList", 20, 1));
 		Thread.sleep(3000);
 			
-		StatusResult = Suggest_Station_List_Page_Objects.StatusResult.getText();
+		StatusResult = Suggest_Station_List_Page_Objects.PSTypeResult.getText();
 		System.out.println(StatusResult + getExcelData("SStationList",20, 1));
 		
 		if(StatusResult.contentEquals(getExcelData("SStationList", 20, 1)))

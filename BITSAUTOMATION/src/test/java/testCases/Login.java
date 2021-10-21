@@ -115,7 +115,7 @@ public class Login extends CommonFunctions{
 		Login_Page_Objects.UserId.clear();
 		Thread.sleep(2000);
 		
-		Login_Page_Objects.UserId.sendKeys(getExcelData("Login", 1, 0));
+		Login_Page_Objects.UserId.sendKeys(getExcelData("Login", 5, 0));
 		Thread.sleep(2000);
 		
 		Login_Page_Objects.Password.clear();

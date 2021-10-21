@@ -18,9 +18,9 @@ import pageObjects.Faculty_Suggest_Station_Detail_Objects;
 import pageObjects.Faculty_Suggest_Station_List_Objects;
 //import pageObjects.Profile_Page_Objects;
 
-public class Faculty_Suggest_Station_Detail extends CommonFunctions{
+public class FacultyRole_Suggest_Station_Detail extends CommonFunctions{
 	
-static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
+static Logger logger = Logger.getLogger(FacultyRole_Suggest_Station_Detail.class);
 	
 	@Test(priority = 0)
 	public void validateNavigatetoAddStation() throws InterruptedException, IOException
@@ -32,7 +32,7 @@ static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
 		Thread.sleep(2000);		
 	}
 
-	//@Test(priority = 1)
+	@Test(priority = 1)
 	public void AddStationScreenshotCapture() throws InterruptedException, IOException
 	{
 		extenttestCase.log(Status.INFO,"Landing into Suggest Station Detail");
@@ -47,9 +47,10 @@ static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
 		extenttestCase.addScreenCaptureFromPath("SuggestStationDetail.png");
 	}
 	
-	//@Test(priority = 2)
+	@Test(priority = 2)
 	public void AddValidation() throws InterruptedException
 	{
+		PageFactory.initElements(driver, Faculty_Suggest_Station_Detail_Objects.class);
 		extenttestCase.log(Status.INFO,"Verifying Add Station Mandatory Field Validation");
 		Faculty_Suggest_Station_Detail_Objects.btnSubmit.click();
 		Thread.sleep(2000);
@@ -71,8 +72,8 @@ static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
 		Thread.sleep(2000);
 	}
 	
-	//@Test(priority = 3)
-	public void VerifyExpand_CollapseSections() throws InterruptedException
+	@Test(priority = 3)
+	public void VerifyExpandCollapseSections() throws InterruptedException
 	{
 		extenttestCase.log(Status.INFO,"Verifying Expand and Collapse Functionality Validation");
 		Faculty_Suggest_Station_Detail_Objects.collapseStation.click();
@@ -85,15 +86,15 @@ static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
 		Thread.sleep(1000);
 	}
 	
-	//@Test(priority = 4)
+	@Test(priority = 4)
 	public void VerifyAddNewStation() throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Add New Station");
 		
-		Faculty_Suggest_Station_Detail_Objects.SName.sendKeys(getExcelData("AddEditStation", 1, 0));
+		Faculty_Suggest_Station_Detail_Objects.SName.sendKeys(getExcelData("SStationDetail", 3, 0));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.PCompany.sendKeys(getExcelData("AddEditStation", 1, 1));
+		Faculty_Suggest_Station_Detail_Objects.PCompany.sendKeys(getExcelData("SStationDetail", 3, 1));
 		Thread.sleep(2000);
 	
 		Actions act = new Actions(driver);
@@ -104,45 +105,48 @@ static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
 		act1.moveToElement(Faculty_Suggest_Station_Detail_Objects.PSType).click().perform();
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.StationType.sendKeys(getExcelData("AddEditStation", 1, 3));
+		Faculty_Suggest_Station_Detail_Objects.StationType.sendKeys(getExcelData("SStationDetail", 3, 2));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.PSProgram.sendKeys(String.valueOf(getExcelData1("AddEditStation", 1, 4)));
+		Faculty_Suggest_Station_Detail_Objects.PSProgram.sendKeys(String.valueOf(getExcelData1("SStationDetail", 3, 3)));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.BDomain.sendKeys(getExcelData("AddEditStation", 1, 5));
+		Faculty_Suggest_Station_Detail_Objects.BDomain.sendKeys(getExcelData("SStationDetail", 3, 4));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.SRelation.sendKeys(getExcelData("AddEditStation", 1, 6));
+		Faculty_Suggest_Station_Detail_Objects.SRelation.sendKeys(getExcelData("SStationDetail", 3, 5));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.URL.sendKeys(getExcelData("AddEditStation", 1, 7));
+		Faculty_Suggest_Station_Detail_Objects.URL.sendKeys(getExcelData("SStationDetail", 3, 6));
 		Thread.sleep(2000);
 		
-		//System.out.println(String.valueOf(getExcelData("AddEditStation", 1, 8)));
+		//System.out.println(String.valueOf(getExcelData("SStationDetail", 1, 8)));
 		
-		Faculty_Suggest_Station_Detail_Objects.ContactNum.sendKeys(String.valueOf(getExcelData1("AddEditStation", 1, 8)));
+		Faculty_Suggest_Station_Detail_Objects.ContactNum.sendKeys(String.valueOf(getExcelData("SStationDetail", 3, 7)));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.Address1.sendKeys(getExcelData("AddEditStation", 1, 9));
+		Faculty_Suggest_Station_Detail_Objects.Address1.sendKeys(getExcelData("SStationDetail", 3, 8));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.Address2.sendKeys(getExcelData("AddEditStation", 1, 10));
+		Faculty_Suggest_Station_Detail_Objects.Address2.sendKeys(getExcelData("SStationDetail", 3, 9));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.Country.sendKeys(getExcelData("AddEditStation", 1, 11));
+		Faculty_Suggest_Station_Detail_Objects.Country.sendKeys(getExcelData("SStationDetail", 5, 10));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.State.sendKeys(getExcelData("AddEditStation", 1, 12));
+		Faculty_Suggest_Station_Detail_Objects.Country.sendKeys(getExcelData("SStationDetail", 3, 10));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.City.sendKeys(getExcelData("AddEditStation", 1, 13));
+		Faculty_Suggest_Station_Detail_Objects.State.sendKeys(getExcelData("SStationDetail", 3, 11));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.Pincode.sendKeys(String.valueOf(getExcelData1("AddEditStation", 1, 14)));
+		Faculty_Suggest_Station_Detail_Objects.City.sendKeys(getExcelData("SStationDetail", 3, 12));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_Detail_Objects.Writeup.sendKeys(getExcelData("AddEditStation", 1, 15));
+		Faculty_Suggest_Station_Detail_Objects.Pincode.sendKeys(String.valueOf(getExcelData("SStationDetail", 3, 13)));
+		Thread.sleep(2000);
+		
+		Faculty_Suggest_Station_Detail_Objects.Writeup.sendKeys(getExcelData("SStationDetail", 3, 14));
 		Thread.sleep(2000);
 		
 		Faculty_Suggest_Station_Detail_Objects.btnSubmit.click();
@@ -150,13 +154,13 @@ static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
 		
 		String rostorMsg=Faculty_Suggest_Station_Detail_Objects.toaster.getText().toString().trim();
 		
-		if (rostorMsg.toString().trim().equals(getExcelData("AddEditStation", 1, 16).toString().trim()))
+		if (rostorMsg.toString().trim().contains("Record Saved Successfully"))
 		{
-			extenttestCase.log(Status.PASS, getExcelData("AddEditStation", 1, 16).toString().trim());
+			extenttestCase.log(Status.PASS, "New Station saved successfully");
 		}
-		else if(rostorMsg.toString().trim().equals(getExcelData("AddEditStation", 1, 17).toString().trim()))
+		else if(rostorMsg.toString().trim().contains("Record already exists with the same station name"))
 		{
-			extenttestCase.log(Status.FAIL, getExcelData("AddEditStation", 1, 17).toString().trim());
+			extenttestCase.log(Status.FAIL, "Record already exists with the same station name");
 		}
 		else
 		{
@@ -183,13 +187,13 @@ static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
 		Faculty_Suggest_Station_List_Objects.drpSearchCriteria.click();
 		Thread.sleep(5000);
 		
-		Faculty_Suggest_Station_List_Objects.drpSearchCriteria.sendKeys(getExcelData("AddEditStation", 0, 0));
+		Faculty_Suggest_Station_List_Objects.drpSearchCriteria.sendKeys(getExcelData("SStationDetail", 0, 0));
 		Thread.sleep(2000);
 
-		Faculty_Suggest_Station_List_Objects.searchBox.sendKeys(getExcelData("AddEditStation", 1, 0));
+		Faculty_Suggest_Station_List_Objects.searchBox.sendKeys(getExcelData("SStationDetail", 3, 0));
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_List_Objects.drpStatus.sendKeys(getExcelData("AddEditStation", 1, 16));
+		Faculty_Suggest_Station_List_Objects.drpStatus.sendKeys(getExcelData("SStationDetail", 3, 16));
 		Thread.sleep(2000);
 		
 		//Suggest_Station_List_Page_Objects.SearchPSType.sendKeys(getExcelData("SStationList", 5, 4));
@@ -205,7 +209,7 @@ static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
 		//String PSTypeResult = Suggest_Station_List_Page_Objects.PSTypeResult.getText();
 		//System.out.println(PSTypeResult);
 		Thread.sleep(2000);
-		if(StationResult.contentEquals(getExcelData("AddEditStation",1,0)) && StatusResult.contentEquals(getExcelData("AddEditStation",1,16)))
+		if(StationResult.contentEquals(getExcelData("SStationDetail",3,0)) && StatusResult.contentEquals(getExcelData("SStationDetail",3,16)))
 		{
 			extenttestCase.log(Status.PASS, "New Station Added Successfully");
 		}
@@ -223,59 +227,62 @@ static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
 			Faculty_Suggest_Station_List_Objects.grdColStation.click();			
 			Thread.sleep(2000);			
 			
-			Faculty_Suggest_Station_Detail_Objects.StationType.sendKeys(getExcelData("AddEditStation", 2, 3));
+			Faculty_Suggest_Station_Detail_Objects.StationType.sendKeys(getExcelData("SStationDetail", 4, 2));
 			Thread.sleep(2000);
 			
-			Faculty_Suggest_Station_Detail_Objects.PSProgram.sendKeys(String.valueOf(getExcelData1("AddEditStation", 2, 4)));
+			Faculty_Suggest_Station_Detail_Objects.PSProgram.sendKeys(String.valueOf(getExcelData1("SStationDetail", 4, 3)));
 			Thread.sleep(2000);
 			
-			Faculty_Suggest_Station_Detail_Objects.BDomain.sendKeys(getExcelData("AddEditStation", 2, 5));
+			Faculty_Suggest_Station_Detail_Objects.BDomain.sendKeys(getExcelData("SStationDetail", 4, 4));
 			Thread.sleep(2000);
 			
 			Faculty_Suggest_Station_Detail_Objects.SRelation.clear();
 			Thread.sleep(2000);
-			Faculty_Suggest_Station_Detail_Objects.SRelation.sendKeys(getExcelData("AddEditStation", 2, 6));
+			Faculty_Suggest_Station_Detail_Objects.SRelation.sendKeys(getExcelData("SStationDetail", 4, 5));
 			Thread.sleep(2000);
 			
 			Faculty_Suggest_Station_Detail_Objects.URL.clear();
 			Thread.sleep(2000);
-			Faculty_Suggest_Station_Detail_Objects.URL.sendKeys(getExcelData("AddEditStation", 2, 7));
+			Faculty_Suggest_Station_Detail_Objects.URL.sendKeys(getExcelData("SStationDetail", 4, 6));
 			Thread.sleep(2000);
 			
-			//System.out.println(String.valueOf(getExcelData("AddEditStation", 1, 8)));
+			//System.out.println(String.valueOf(getExcelData("SStationDetail", 1, 8)));
 			
 			Faculty_Suggest_Station_Detail_Objects.ContactNum.clear();
 			Thread.sleep(2000);
-			Faculty_Suggest_Station_Detail_Objects.ContactNum.sendKeys(String.valueOf(getExcelData1("AddEditStation", 2, 8)));
+			Faculty_Suggest_Station_Detail_Objects.ContactNum.sendKeys(String.valueOf(getExcelData("SStationDetail", 4, 7)));
 			Thread.sleep(2000);
 			
 			Faculty_Suggest_Station_Detail_Objects.Address1.clear();
 			Thread.sleep(2000);
-			Faculty_Suggest_Station_Detail_Objects.Address1.sendKeys(getExcelData("AddEditStation", 2, 9));
+			Faculty_Suggest_Station_Detail_Objects.Address1.sendKeys(getExcelData("SStationDetail", 4, 8));
 			Thread.sleep(2000);
 			
 			Faculty_Suggest_Station_Detail_Objects.Address2.clear();
 			Thread.sleep(2000);
-			Faculty_Suggest_Station_Detail_Objects.Address2.sendKeys(getExcelData("AddEditStation", 2, 10));
+			Faculty_Suggest_Station_Detail_Objects.Address2.sendKeys(getExcelData("SStationDetail", 4, 9));
 			Thread.sleep(2000);
 			
-			Faculty_Suggest_Station_Detail_Objects.Country.sendKeys(getExcelData("AddEditStation", 2, 11));
+			Faculty_Suggest_Station_Detail_Objects.Country.sendKeys(getExcelData("SStationDetail", 5, 10));
 			Thread.sleep(2000);
 			
-			Faculty_Suggest_Station_Detail_Objects.State.sendKeys(getExcelData("AddEditStation", 2, 12));
+			Faculty_Suggest_Station_Detail_Objects.Country.sendKeys(getExcelData("SStationDetail", 4, 10));
+			Thread.sleep(2000);
+			
+			Faculty_Suggest_Station_Detail_Objects.State.sendKeys(getExcelData("SStationDetail", 4, 11));
 			Thread.sleep(2000);			
 			
-			Faculty_Suggest_Station_Detail_Objects.City.sendKeys(getExcelData("AddEditStation", 2, 13));
+			Faculty_Suggest_Station_Detail_Objects.City.sendKeys(getExcelData("SStationDetail", 4, 12));
 			Thread.sleep(2000);
 			
 			Faculty_Suggest_Station_Detail_Objects.Pincode.clear();
 			Thread.sleep(2000);
-			Faculty_Suggest_Station_Detail_Objects.Pincode.sendKeys(String.valueOf(getExcelData1("AddEditStation", 2, 14)));
+			Faculty_Suggest_Station_Detail_Objects.Pincode.sendKeys(String.valueOf(getExcelData("SStationDetail", 4, 13)));
 			Thread.sleep(2000);
 			
 			Faculty_Suggest_Station_Detail_Objects.Writeup.clear();
 			Thread.sleep(2000);
-			Faculty_Suggest_Station_Detail_Objects.Writeup.sendKeys(getExcelData("AddEditStation", 2, 15));
+			Faculty_Suggest_Station_Detail_Objects.Writeup.sendKeys(getExcelData("SStationDetail", 4, 14));
 			Thread.sleep(5000);
 			
 			Faculty_Suggest_Station_Detail_Objects.btnSubmit.click();
@@ -284,13 +291,17 @@ static Logger logger = Logger.getLogger(Faculty_Suggest_Station_Detail.class);
 			System.out.println(Faculty_Suggest_Station_Detail_Objects.toaster.getText().toString().trim());
 			String rostorMsg=Faculty_Suggest_Station_Detail_Objects.toaster.getText().toString().trim();
 			
-			if (rostorMsg.toString().trim().equals(getExcelData("AddEditStation", 2, 16).toString().trim()))
+			if (rostorMsg.toString().trim().contains("Record Updated Successfully"))
 			{
-				extenttestCase.log(Status.PASS, getExcelData("AddEditStation", 2, 16).toString().trim());
+				extenttestCase.log(Status.PASS, "Station Updated Successfully");
+			}
+			else if (rostorMsg.toString().trim().contains("You are not allowed to change this status type"))
+			{
+				extenttestCase.log(Status.INFO, "User cannot update the record");
 			}
 			else
 			{
-				extenttestCase.log(Status.PASS, "Update not successful");
+				extenttestCase.log(Status.PASS, "Station Update not successful");
 			}
 			//Faculty_Suggest_Station_Detail_Objects.StationMenu.click();
 			//Thread.sleep(2000);

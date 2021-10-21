@@ -99,10 +99,10 @@ public class Faculty_Suggest_Station_List_Objects {
 	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[1]/div/div/div[1]/h2")
 	public static WebElement pageTitle;
 	
-	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[1]/div/div/div[1]/nav/ol/li[3]")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-add-station/div/div[1]/div/div/div[1]/nav/ol/li[3]")  
 	public static WebElement brdCrumbs1;
 	
-	@FindBy(xpath="/html/body/app-root/app-layout/app-manage-station/div/div[2]/div/div[3]/table/tbody/tr[7]/td[1]/div/input")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-manage-station/div/div[2]/div/div[3]/table/tbody/tr/td[1]/div/input")
 	public static WebElement grdCheckbox;
 	
 	@FindBy(xpath="/html/body/app-root/app-layout/app-manage-station/div/div[2]/div/div[3]/table/tbody/tr/td[2]/a")

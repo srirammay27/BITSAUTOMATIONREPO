@@ -5,12 +5,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class Problem_Bank_List_Objects {
 	
-	@FindBy(xpath="//*[@id=\"collapsibleNavbar\"]/ul/li[3]/a")
+	@FindBy(xpath="//*[@id=\"collapsibleNavbar\"]/ul/li[4]/a")
 	public static WebElement PBMenu;
 
 	///////////////// List Grid Sort //////////////////////////////////////////////////////
 
 	@FindBy(xpath="/html/body/app-root/app-layout/app-problem-bank/div/div[2]/div/div[3]/table/thead/tr/th[2]/em")
+	               
 	public static WebElement SortSName;
 
 	@FindBy(xpath="/html/body/app-root/app-layout/app-problem-bank/div/div[2]/div/div[3]/table/thead/tr/th[4]/em")
@@ -24,7 +25,7 @@ public class Problem_Bank_List_Objects {
 	@FindBy(xpath="/html/body/app-root/app-layout/app-problem-bank/div/div[2]/div/div[1]/div/div/div/div[2]/div/div/input")
 	public static WebElement SearchField;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-problem-bank/div/div[2]/div/div[2]/table/tbody/tr/td")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-problem-bank/div/div[2]/div/div[3]/table/tbody/tr/td")	              
 	public static WebElement ListWarn;
 
 	@FindBy(xpath="/html/body/app-root/app-layout/app-problem-bank/div/div[2]/div/div[1]/div/div/div/div[1]/div/select")
@@ -44,6 +45,10 @@ public class Problem_Bank_List_Objects {
 
 	@FindBy(xpath="/html/body/app-root/app-layout/app-problem-bank/div/div[2]/div/div[3]/table/tbody/tr/td[5]")
 	public static WebElement BDResult;
+	
+	//@FindBy(xpath="/html/body/app-root/app-layout/app-manage-station/div/div[2]/div/div[3]/table/tbody/tr/td[6]")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-problem-bank/div/div[2]/div/div[3]/table/tbody/tr[1]/td[3]")
+	public static WebElement PSTypeResult;
 
 
 }

@@ -76,10 +76,10 @@ public class Suggest_Station_List_Page_Objects {
 	
    ////////////////////////////// Delete Record //////////////////////////////////////
 	
-	@FindBy(xpath="/html/body/app-root/app-layout/app-header/nav/div/div/div[2]/ul/li[2]/div/div/a/span")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-header/nav/div/div/div[2]/ul/li[2]/div/div/a")
 	public static WebElement ProfileClick;
 	
-	@FindBy(xpath="/html/body/app-root/app-layout/app-header/nav/div/div/div[2]/ul/li[2]/div/div/div/a[2]")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-header/nav/div/div/div[2]/ul/li[2]/div/div/div/a")
 	public static WebElement SignOutClick;
 
 }

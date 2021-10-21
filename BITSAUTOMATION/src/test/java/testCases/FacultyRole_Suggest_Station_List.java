@@ -24,7 +24,7 @@ import pageObjects.Faculty_Suggest_Station_List_Objects;
 
 import org.openqa.selenium.support.ui.Select;
 
-public class Faculty_Suggest_Station_List extends CommonFunctions
+public class FacultyRole_Suggest_Station_List extends CommonFunctions
 {
 	static Logger logger=Logger.getLogger(Edit_Profile.class);
 	String strPageTitle=""; 
@@ -40,7 +40,6 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
 		Faculty_Suggest_Station_List_Objects.mnuSuggestStation.click();		
 		Thread.sleep(5000);			
 		extenttestCase.log(Status.PASS, "Successfully navigated to Suggest Station Page");
-		System.out.println("Priority1");
 	}
 	
 	@Test(priority=2)
@@ -56,7 +55,6 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
 		{
 			extenttestCase.log(Status.PASS, "Bread crumbs text pass");
 		}
-		System.out.println("Priority2");
 	}
 	
 	@Test(priority=3)
@@ -76,10 +74,11 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
 			{
 				//System.out.println("Record Count not found");
 				extenttestCase.log(Status.PASS, "There is no Station data for the faculty");
-				System.out.println("Priority3");
+				System.out.println("Priority3 - rec not found");
 			}
 			else
 			{	
+				System.out.println("Priority3 - else part");
 				String[] RecordCountTop = Faculty_Suggest_Station_List_Objects.recordCountTop.getText().trim().split(" ");
 				String[] RecordCountBottom = Faculty_Suggest_Station_List_Objects.recordCountBottom.getText().trim().split(" ");
 				String strRecordCountTop = RecordCountTop[1];
@@ -95,23 +94,23 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
 				if (intRecordCountTop == intGridRowsWithoutHeader)
 				{					
 					extenttestCase.log(Status.PASS, "Grid record count matches Records on top of grid");
-					System.out.println("Priority3");
+					System.out.println("Priority3 - Grid record count matches Records on top of grid");
 				}
 				if (intRecordCountTop != intGridRowsWithoutHeader)
 				{						
 					extenttestCase.log(Status.FAIL, "Grid record count do not Match Records on top of grid");
-					System.out.println("Priority3");
+					System.out.println("Priority3 - Grid record count do not Match Records on top of grid");
 				}
 				
 				if (intRecordCountBottom == intGridRowsWithoutHeader)
 				{					
 					extenttestCase.log(Status.PASS, "Grid record count matches Records on Bottom of grid");
-					System.out.println("Priority3");
+					System.out.println("Priority3 - Grid record count matches Records on Bottom of grid");
 				}	
 				if (intRecordCountBottom != intGridRowsWithoutHeader)
 				{
 					extenttestCase.log(Status.PASS, "Grid record count do not match Records on Bottom of grid");
-					System.out.println("Priority3");
+					System.out.println("Priority3 - Grid record count do not match Records on Bottom of grid");
 				}		
 			}
 		}
@@ -120,10 +119,9 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
 			if (Faculty_Suggest_Station_List_Objects.grdRecordNotFound.getText().contains("Record(s) not found"))
 			{
 				extenttestCase.log(Status.PASS, "There is no Station data for the faculty");
-				System.out.println("Priority3");
+				System.out.println("Priority3 - There is no Station data for the faculty - ");
 			}
 		}
-		System.out.println("Priority3");
 	}
 	
 	@Test(priority=4)
@@ -309,12 +307,12 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
      		
      		if (options.trim().toLowerCase().equals(Faculty_Suggest_Station_List_Objects.grdRowStatus.getText().toString().trim().toLowerCase())) 
      		{
-     			extenttestCase.log(Status.PASS, "Search Result successfully Status : " + options);
+     			extenttestCase.log(Status.PASS, "Status Filter Result successfully Status : " + options);
      			System.out.println("Priority5");
      		}
      		else
      		{
-     			extenttestCase.log(Status.FAIL, "Search Result not valid");
+     			extenttestCase.log(Status.FAIL, "Status Filter Result not valid");
      			System.out.println("Priority5");
      		}     		
 		}
@@ -328,47 +326,53 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
 		extenttestCase=extentReport.createTest("Vaidating the Grid Filter : Status drop down");
 		logger.info("Vaidating the Grid Filter : Status drop down");		
 		PageFactory.initElements(driver, Faculty_Suggest_Station_List_Objects.class);		
-		
+		System.out.println("Priority6 Entry success");
 		//int intGridRowCount = driver.findElements(By.tagName("tr")).size();
 		//int intGridRowsWithoutHeader=driver.findElements(By.tagName("tr")).size()-1;
 		
 		Select dropdown = new Select(Faculty_Suggest_Station_List_Objects.drpPSType);
 		List <WebElement> listoptions = dropdown.getOptions();		 
 		int size = listoptions.size();
-		//System.out.println("drop down size "+size);
+		System.out.println("drop down size "+size);
 		for(int i =0; i<size-1 ; i++)
 		{
 			String options = String.valueOf(listoptions.get(i+1).getText().trim());
 	               
-	        //System.out.println(options);
+	        System.out.println(options);
 	        //System.out.println("First option");
 	        Faculty_Suggest_Station_List_Objects.drpPSType.sendKeys(options);
-	        //System.out.println("First option selected");
+	        System.out.println("First option selected");
 	        //System.out.println(options.trim().toLowerCase());
 	        //System.out.println(Suggest_Station_Page_Objects.grdRowPSType.getText().toString().trim().toLowerCase());
      		Thread.sleep(5000);
      		//System.out.println("Compare " +options.trim().toLowerCase()+ " And " +Suggest_Station_Page_Objects.grdRowPSType.getText().toString().trim().toLowerCase());
      		if (options.trim().toLowerCase().equals(Faculty_Suggest_Station_List_Objects.grdRowPSType.getText().toString().trim().toLowerCase())) 
      		{
-     			extenttestCase.log(Status.PASS, "Search Result retrieved successfully");
+     			extenttestCase.log(Status.PASS, "PS Type Filter Result retrieved successfully");
      			//System.out.println("success");
-     			System.out.println("Priority6");
+     			System.out.println("PS Type Filter Result retrieved successfully");
      		}
      		else
      		{
-     			extenttestCase.log(Status.FAIL, "Search Result not valid");
+     			extenttestCase.log(Status.FAIL, "PS Type Filter Result not valid");
      			//System.out.println("Fail");
-     			System.out.println("Priority6");
+     			System.out.println("PS Type Filter Result not valid");
      		}     		
 		}
-		System.out.println("Priority6");
+		System.out.println("Priority6 out successfully");
 		driver.navigate().refresh();
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 7)
 	public void ClickDelete () throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Delete Record");
+		
+	//	Faculty_Suggest_Station_List_Objects.searchBox.clear();
+		//Thread.sleep(2000);
+		
+		Faculty_Suggest_Station_List_Objects.searchBox.sendKeys(getExcelData("ManageStation", 4,0));
+		Thread.sleep(6000);
 		
 		Faculty_Suggest_Station_List_Objects.grdCheckbox.click();
 		Thread.sleep(2000);
@@ -387,20 +391,21 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
 		
 		Faculty_Suggest_Station_List_Objects.btnActionDelete.click();
 		Thread.sleep(2000);
-		
+		//Faculty_Suggest_Station_List_Objects.btnCloseDelete.click();
 		Faculty_Suggest_Station_List_Objects.btnOkayDelete.click();
 		Thread.sleep(2000);
+		driver.navigate().refresh();
 		
 	}
 	
-	//@Test(priority = 10)
+	@Test(priority = 8)
 	public void validateDeleteStation() throws Throwable
 	{
 		
 		Faculty_Suggest_Station_List_Objects.searchBox.clear();
 		Thread.sleep(2000);
 		
-		Faculty_Suggest_Station_List_Objects.searchBox.sendKeys(getExcelData("ManageStation", 5, 1));
+		Faculty_Suggest_Station_List_Objects.searchBox.sendKeys(getExcelData("ManageStation", 4, 1));
 		Thread.sleep(2000);
 
 		String ListWarn =  Faculty_Suggest_Station_List_Objects.grdRecordNotFound.getText();
@@ -418,7 +423,7 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
 		
 		driver.navigate().refresh();
 	}
-	@Test(priority=11)
+	@Test(priority=9)
 	public void validateNavigatetoAddStation() throws Throwable
 	{  		
 		extenttestCase=extentReport.createTest("Verifying Suggest Station Detail Page");
@@ -430,10 +435,10 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
 		Faculty_Suggest_Station_List_Objects.btnAddStation.click();
 		Thread.sleep(15);
 		strPageTitle=Faculty_Suggest_Station_List_Objects.pageTitle.getText().toString().trim();
-		brdCrumbs=Faculty_Suggest_Station_List_Objects.brdCrumbs1.getText().toString().trim();
+		brdCrumbs=Faculty_Suggest_Station_List_Objects.brdCrumbs.getText().toString().trim();
 		//System.out.println(strPageTitle);
 		
-		if (brdCrumbs.toString().trim().equals("Add/Edit Station"))
+		if (brdCrumbs.toString().trim().contains("Manage Station"))
 		{
 			extenttestCase.log(Status.PASS, "Successfully Navigated to Station Page");
  			//System.out.println("Successfully Navigated to Station Page" + brdCrumbs);
@@ -446,8 +451,7 @@ public class Faculty_Suggest_Station_List extends CommonFunctions
 			
 		System.out.println("Priority11");
 		driver.navigate().refresh();
-	}
-	
+	}	
 }
 	     		
 	         
