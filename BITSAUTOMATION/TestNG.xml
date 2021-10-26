@@ -73,10 +73,16 @@
 			<class name="testCases.FacultyRole_Suggest_Station_Detail">
 			</class>
 		</classes>
-	</test>-->
+	</test>
 	<test name="Problem Bank List - Faculty Role">
 		<classes>
-			<class name="testCases.ProblemBank_List">
+			<class name="testCases.FacultyRole_ProblemBank_List">
+			</class>
+		</classes>
+	</test>-->
+	<test name="Problem Bank Add - Faculty Role">
+		<classes>
+			<class name="testCases.FacultyRole_ProblemBank_Add">
 			</class>
 		</classes>
 	</test>

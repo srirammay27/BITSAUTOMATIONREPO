@@ -2,25 +2,30 @@ package testCases;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
 import CommonFunctions.CommonFunctions;
-
+import pageObjects.Faculty_Suggest_Station_List_Objects;
 import pageObjects.Problem_Bank_List_Objects;
 import pageObjects.Suggest_Station_List_Page_Objects;
 
-public class ProblemBank_List extends CommonFunctions{
+public class FacultyRole_ProblemBank_List extends CommonFunctions{
 	
-static Logger logger = Logger.getLogger(ProblemBank_List.class);
-	
+static Logger logger = Logger.getLogger(FacultyRole_ProblemBank_List.class);
+String RecCountBefDel= "";
+String RecCountAftDel= "";
 	@Test(priority = 0)
 	public void ProblemBankMenu() throws InterruptedException, IOException
 	{
@@ -62,12 +67,15 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 
 		Problem_Bank_List_Objects.SearchField.sendKeys(getExcelData("PBankList", 1, 1));
 		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.SearchFieldNoItems.click();
+		Thread.sleep(2000);
 
-		String ListWarn =  Problem_Bank_List_Objects.ListWarn.getText();
+		String ListWarn =  Problem_Bank_List_Objects.SearchFieldNoItems.getText();
 		System.out.println(ListWarn);
 		Thread.sleep(2000);
 
-		if(ListWarn.contains("Record(s) not found"))
+		if(ListWarn.contains("Not Found"))
 		{
 			extenttestCase.log(Status.PASS, "Invalid Search Validation Done Successfully");
 		}
@@ -90,6 +98,9 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 		Thread.sleep(2000);
 
 		Problem_Bank_List_Objects.SearchField.sendKeys(getExcelData("PBankList", 2, 1));
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.SearchFieldItem.click();
 		Thread.sleep(2000);
 		
 		Problem_Bank_List_Objects.SearchPSType.sendKeys(getExcelData("PBankList", 2, 2));
@@ -123,6 +134,9 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 		Thread.sleep(2000);
 
 		Problem_Bank_List_Objects.SearchField.sendKeys(getExcelData("PBankList", 3, 1));
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.SearchFieldItem.click();
 		Thread.sleep(2000);
 		
 		Problem_Bank_List_Objects.SearchPSType.sendKeys(getExcelData("PBankList", 3, 3));
@@ -162,6 +176,9 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 		Thread.sleep(2000);
 
 		Problem_Bank_List_Objects.SearchField.sendKeys(getExcelData("PBankList", 4, 1));
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.SearchFieldItem.click();
 		Thread.sleep(2000);
 		
 		Problem_Bank_List_Objects.SearchPSType.sendKeys(getExcelData("PBankList", 4, 3));
@@ -238,6 +255,7 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 	@Test(priority = 7)
 	public void VerifyBatch() throws Throwable
 	{	
+		driver.navigate().refresh();
 		String WarningMsg="";
 		extenttestCase.log(Status.INFO,"Verifying Batch drop down");
 		Thread.sleep(2000);		
@@ -249,7 +267,7 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 		
 		if(WarningMsg.contentEquals("Record(s) not found"))
 		{
-			extenttestCase.log(Status.PASS, "The selected batch does not have records");
+			extenttestCase.log(Status.PASS, "The selected batch does not have records(2020-21)");
 		}
 		else
 		{
@@ -258,17 +276,26 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 		Thread.sleep(3000);
 		
 		Problem_Bank_List_Objects.SearchPSBatch.sendKeys(getExcelData("PBankList", 9, 1));
-		Thread.sleep(3000);		
+		Thread.sleep(3000);	
 		
+		//Select grid = new Select(Problem_Bank_List_Objects.Grid);
+		//List <WebElement> listoptions = grid.getOptions();	 
+		
+		List<WebElement> rows = driver.findElements(By.xpath("/html/body/app-root/app-layout/app-problem-bank/div/div[2]/div/div[3]/table/tbody/tr"));
+		int size = rows.size();
 		WarningMsg=Problem_Bank_List_Objects.ListWarn.getText().toString();
 		
 		if(WarningMsg.contentEquals("Record(s) not found"))
 		{
 			extenttestCase.log(Status.PASS, "The selected batch does not have records");
+		}	
+		else if (size>0)
+		{
+			extenttestCase.log(Status.PASS, "Batch filter successfully validated (2021-22)");
 		}
 		else
 		{
-			extenttestCase.log(Status.FAIL, "Batch validation failed");
+			extenttestCase.log(Status.FAIL, "Batch validation failed : "+ size);
 		}		
 		Thread.sleep(3000);
 
@@ -279,7 +306,7 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 		
 		if(WarningMsg.contentEquals("Record(s) not found"))
 		{
-			extenttestCase.log(Status.PASS, "The selected batch does not have records");
+			extenttestCase.log(Status.PASS, "The selected batch does not have records (2022-23)");
 		}
 		else
 		{
@@ -294,7 +321,7 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 		
 		if(WarningMsg.contentEquals("Record(s) not found"))
 		{
-			extenttestCase.log(Status.PASS, "The selected batch does not have records");
+			extenttestCase.log(Status.PASS, "The selected batch does not have records (2023-24)");
 		}
 		else
 		{
@@ -302,4 +329,102 @@ static Logger logger = Logger.getLogger(ProblemBank_List.class);
 		}		
 		Thread.sleep(3000);
 		}
+	
+	@Test(priority = 8)
+	public void ClickDelete () throws Throwable
+	{
+		extenttestCase.log(Status.INFO,"Deleting a Problem Bank");
+		
+		driver.navigate().refresh();		
+		
+		Problem_Bank_List_Objects.SearchField.clear();
+		Thread.sleep(5000);
+		
+		Problem_Bank_List_Objects.SearchSelect.sendKeys(getExcelData("PBankList", 3, 0));
+		Thread.sleep(2000);		
+		
+		Problem_Bank_List_Objects.SearchSelect.sendKeys(getExcelData("PBankList", 2, 0));
+		Thread.sleep(2000);
+
+		Problem_Bank_List_Objects.SearchField.sendKeys(getExcelData("PBankList", 5, 1));
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.SearchFieldItem.click();
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.SearchPSType.sendKeys(getExcelData("PBankList", 8, 0));
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.SearchPSType.sendKeys(getExcelData("PBankList", 9, 0));
+		Thread.sleep(2000);
+		
+		RecCountBefDel=Problem_Bank_List_Objects.GridRecCount.getText().toString();		
+		System.out.println(RecCountBefDel);
+
+		Problem_Bank_List_Objects.Checkbox.click();
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.ActionClick.click();
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.DeleteClick.click();
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.ClosePopup.click();
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.ActionClick.click();
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.DeleteClick.click();
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.OkPopup.click();
+		Thread.sleep(2000);
+		
+		extenttestCase.log(Status.PASS,"Deleting action completed");
+		
+	}
+	
+	@Test(priority = 9)
+	public void VerifyDelete() throws Throwable
+	{
+		driver.navigate().refresh();
+		extenttestCase.log(Status.INFO,"Verifying deleted Problem Bank record");
+		
+		Problem_Bank_List_Objects.SearchField.clear();
+		Thread.sleep(5000);
+		
+		Problem_Bank_List_Objects.SearchSelect.sendKeys(getExcelData("PBankList", 3, 0));
+		Thread.sleep(2000);		
+		
+		Problem_Bank_List_Objects.SearchSelect.sendKeys(getExcelData("PBankList", 2, 0));
+		Thread.sleep(2000);
+
+		Problem_Bank_List_Objects.SearchField.sendKeys(getExcelData("PBankList", 5, 1));
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.SearchFieldItem.click();
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.SearchPSType.sendKeys(getExcelData("PBankList", 8, 0));
+		Thread.sleep(2000);
+		
+		Problem_Bank_List_Objects.SearchPSType.sendKeys(getExcelData("PBankList", 9, 0));
+		Thread.sleep(2000);
+		
+		RecCountAftDel=Problem_Bank_List_Objects.GridRecCount.getText().toString();
+		
+		System.out.println(RecCountAftDel);		
+
+		if(RecCountBefDel!=RecCountAftDel)//(ListWarn.contains("Record(s) not found"))
+		{
+			extenttestCase.log(Status.PASS, "Problem Bank Deleted Successfully");
+		}
+		else
+		{
+			extenttestCase.log(Status.INFO, "Problem Bank Deletion Failed");
+		}		
+		driver.navigate().refresh();
+	}
 }

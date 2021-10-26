@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class ProblemBank_Add_Objects {
 
-	@FindBy(xpath="//*[@id=\"collapsibleNavbar\"]/ul/li[3]/a")
+	@FindBy(xpath="//*[@id=\"collapsibleNavbar\"]/ul/li[4]/a")
 	public static WebElement PBMenu;
 
 	/////////////////////////////// Add Problem Detail ///////////////////////////////
@@ -99,10 +99,12 @@ public class ProblemBank_Add_Objects {
 	@FindBy(xpath="//*[@id=\"dcondition\"]/div/table/tbody/div[3]/tr/div/td/div/div/input")
 	public static WebElement NoOfS;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-discipline/div/div[2]/div/div[1]/form/div[5]/div[2]/div/button[2]")
+	//@FindBy(xpath="/html/body/app-root/app-layout/app-discipline/div/div[2]/div/div[1]/form/div[5]/div[2]/div/button[2]")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-discipline/div[1]/div[2]/div/div[1]/form/div[6]/div[2]/div/button[2]")
 	public static WebElement AddDG;
 
-	@FindBy(xpath="/html/body/app-root/app-layout/app-discipline/div/div[2]/div/div[1]/form/div[6]/div/table/tbody/tr/td[11]/a/em")
+	//@FindBy(xpath="/html/body/app-root/app-layout/app-discipline/div/div[2]/div/div[1]/form/div[6]/div/table/tbody/tr/td[11]/a/em")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-discipline/div[1]/div[2]/div/div[1]/form/div[7]/div/table/tbody/tr/td[12]/a/em")
 	public static WebElement DeleteDG;
 
 	@FindBy(xpath="//*[@id=\"modal\"]/div/div/div[3]/button[1]")
@@ -329,7 +331,8 @@ public class ProblemBank_Add_Objects {
 	
 	 /////////////////////// Others ///////////////////////////
 	
-	@FindBy(xpath="//*[@id=\"facility\"]/div/div[1]/div/div[1]/label/input")
+	//@FindBy(xpath="//*[@id=\"facility\"]/div/div[1]/div/div[1]/label/input")
+	@FindBy(xpath="/html/body/app-root/app-layout/app-facility/div/div[2]/div/div[1]/div[7]/div[2]/div/div/div[1]/div/div[1]/label/input")
 	public static WebElement YesTA;
 	
 	@FindBy(xpath="//*[@id=\"facility\"]/div/div[2]/div/div[1]/label/input")
@@ -354,5 +357,11 @@ public class ProblemBank_Add_Objects {
 	
 	@FindBy(xpath="/html/body/app-root/app-layout/app-project-details/div/div[2]/div/div[3]/table/tbody/tr/td[3]/a")
 	public static WebElement CheckProblem;
+	
+	@FindBy(xpath="//*[@id=\"toast-container\"]")
+	public static WebElement toaster;
+	
+	@FindBy(xpath="//*[@id=\"others\"]")
+	public static WebElement OtherInfo;
 
 }

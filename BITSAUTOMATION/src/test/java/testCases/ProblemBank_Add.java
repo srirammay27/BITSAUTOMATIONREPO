@@ -52,7 +52,7 @@ public class ProblemBank_Add extends CommonFunctions{
 	
 
 	@Test(priority = 1)
-	public void VerfiyGInfo() throws InterruptedException
+	public void VerfiyGeneralInfo() throws InterruptedException
 	{
 		extenttestCase.log(Status.INFO,"Verifying Mandatory Field Validation in General Info");
 		ProblemBank_Add_Objects.SaveNext.click();
@@ -61,7 +61,7 @@ public class ProblemBank_Add extends CommonFunctions{
 	}
 	
 	@Test(priority = 2)
-	public void AddGInfo() throws Throwable
+	public void AddGeneralInfo() throws Throwable
 	{
 		extenttestCase.log(Status.INFO,"Verifying Add General Info in Problem Bank");
 		ProblemBank_Add_Objects.PSType.sendKeys(getExcelData("AddProblem", 2, 0));
