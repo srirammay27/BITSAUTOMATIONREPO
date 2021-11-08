@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [BITS Automation]" guice-stage="DEVELOPMENT" verbose="2">
-  <test thread-count="5" name="Problem Bank List - Faculty Role(failed)" verbose="2">
+  <test thread-count="5" name="Problem Bank Add - Faculty Role(failed)" verbose="2">
     <classes>
-      <class name="testCases.ProblemBank_List">
+      <class name="testCases.FacultyRole_ProblemBank_Add">
         <methods>
-          <include name="VerifyPSType"/>
           <include name="tearDown"/>
+          <include name="AddFacility"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- testCases.ProblemBank_List -->
+      </class> <!-- testCases.FacultyRole_ProblemBank_Add -->
     </classes>
-  </test> <!-- Problem Bank List - Faculty Role(failed) -->
+  </test> <!-- Problem Bank Add - Faculty Role(failed) -->
 </suite> <!-- Failed suite [BITS Automation] -->

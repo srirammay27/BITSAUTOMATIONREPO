@@ -79,13 +79,14 @@
 			<class name="testCases.FacultyRole_ProblemBank_List">
 			</class>
 		</classes>
-	</test>-->
+	</test>
 	<test name="Problem Bank Add - Faculty Role">
 		<classes>
 			<class name="testCases.FacultyRole_ProblemBank_Add">
 			</class>
 		</classes>
-	</test>
+	</test>-->
+	<!-- Till here -->
 	<!--<test name="Logout">
 		<classes>
 			<class name="testCases.Logout">
