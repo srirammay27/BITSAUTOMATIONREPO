@@ -72,7 +72,16 @@ public class FacultyAllot_GroupLeader_Allotment_Objects {
 	public static List<WebElement> DynamicGridcol;
 	
 	@FindBy(xpath="//table/tbody/tr/td[6]/div/select")
-	public static List<WebElement> DynamicGridrow;
+	public static List<WebElement> GroupLead_drpdwn_Grid;
+
+	@FindBy(xpath="//table/tbody//tr//td[1]")
+	public static List<WebElement> Station_val;
+	
+	@FindBy(xpath="//table/tbody//tr//td[3]")
+	public static List<WebElement> City_Gridval;
+	
+	@FindBy(xpath="//table/tbody//tr//td[5]")
+	public static List<WebElement> Department_Gridval;
 
 	
 	@FindBy(xpath="//button[contains(text(),'Allot Group Leader')]")
