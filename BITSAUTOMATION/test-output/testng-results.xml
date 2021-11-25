@@ -1,77 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="14" passed="13" failed="0" skipped="0">
+<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-25T22:23:50 IST" name="BITS Automation" finished-at="2021-10-25T22:30:17 IST" duration-ms="387349">
+  <suite started-at="2021-11-22T15:16:57 IST" name="BITS Automation" finished-at="2021-11-22T15:17:22 IST" duration-ms="24800">
     <groups>
     </groups>
-    <test started-at="2021-10-25T22:23:50 IST" name="Login" finished-at="2021-10-25T22:24:13 IST" duration-ms="23645">
+    <test started-at="2021-11-22T15:16:57 IST" name="Login" finished-at="2021-11-22T15:17:22 IST" duration-ms="24800">
       <class name="testCases.Login">
-        <test-method signature="ValidUserandinvalidPass()[pri:0, instance:testCases.Login@6d4d66d2]" started-at="2021-10-25T22:23:50 IST" name="ValidUserandinvalidPass" finished-at="2021-10-25T22:23:50 IST" duration-ms="46" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidUserandinvalidPass -->
-        <test-method signature="InvalidUserIdandPassword()[pri:1, instance:testCases.Login@6d4d66d2]" started-at="2021-10-25T22:23:50 IST" name="InvalidUserIdandPassword" finished-at="2021-10-25T22:24:02 IST" duration-ms="11650" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InvalidUserIdandPassword -->
-        <test-method signature="ValidUserIdandPassword()[pri:2, instance:testCases.Login@6d4d66d2]" started-at="2021-10-25T22:24:02 IST" name="ValidUserIdandPassword" finished-at="2021-10-25T22:24:13 IST" duration-ms="11908" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidUserIdandPassword -->
-      </class> <!-- testCases.Login -->
-    </test> <!-- Login -->
-    <test started-at="2021-10-25T22:24:14 IST" name="Problem Bank Add - Faculty Role" finished-at="2021-10-25T22:30:17 IST" duration-ms="363671">
-      <class name="testCases.FacultyRole_ProblemBank_Add">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:23:39 IST" name="launchBrowser" finished-at="2021-10-25T22:23:50 IST" duration-ms="11037" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testCases.Login@6d4d66d2]" started-at="2021-11-22T15:16:48 IST" name="launchBrowser" finished-at="2021-11-22T15:16:57 IST" duration-ms="8798" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="ProblemBankMenu()[pri:0, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:24:14 IST" name="ProblemBankMenu" finished-at="2021-10-25T22:24:28 IST" duration-ms="14952" status="PASS">
+        <test-method signature="ValidUserandinvalidPass()[pri:0, instance:testCases.Login@6d4d66d2]" started-at="2021-11-22T15:16:57 IST" name="ValidUserandinvalidPass" finished-at="2021-11-22T15:16:57 IST" duration-ms="80" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ProblemBankMenu -->
-        <test-method signature="VerfiyGeneralInfo()[pri:1, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:24:28 IST" name="VerfiyGeneralInfo" finished-at="2021-10-25T22:24:31 IST" duration-ms="2065" status="PASS">
+        </test-method> <!-- ValidUserandinvalidPass -->
+        <test-method signature="InvalidUserIdandPassword()[pri:1, instance:testCases.Login@6d4d66d2]" started-at="2021-11-22T15:16:57 IST" name="InvalidUserIdandPassword" finished-at="2021-11-22T15:17:10 IST" duration-ms="12961" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerfiyGeneralInfo -->
-        <test-method signature="AddGeneralInfo()[pri:2, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:24:31 IST" name="AddGeneralInfo" finished-at="2021-10-25T22:24:55 IST" duration-ms="24112" status="PASS">
+        </test-method> <!-- InvalidUserIdandPassword -->
+        <test-method signature="ValidUserIdandPassword()[pri:2, instance:testCases.Login@6d4d66d2]" started-at="2021-11-22T15:17:10 IST" name="ValidUserIdandPassword" finished-at="2021-11-22T15:17:22 IST" duration-ms="11714" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddGeneralInfo -->
-        <test-method signature="AddDiscipline()[pri:3, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:24:55 IST" name="AddDiscipline" finished-at="2021-10-25T22:25:39 IST" duration-ms="44259" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddDiscipline -->
-        <test-method signature="AddDisciplineAgain()[pri:4, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:25:39 IST" name="AddDisciplineAgain" finished-at="2021-10-25T22:26:08 IST" duration-ms="29351" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddDisciplineAgain -->
-        <test-method signature="AddTechSkill()[pri:5, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:26:08 IST" name="AddTechSkill" finished-at="2021-10-25T22:26:49 IST" duration-ms="40482" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddTechSkill -->
-        <test-method signature="AddNonTechSkill()[pri:6, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:26:49 IST" name="AddNonTechSkill" finished-at="2021-10-25T22:27:08 IST" duration-ms="18964" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddNonTechSkill -->
-        <test-method signature="AddNewDomain()[pri:7, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:27:08 IST" name="AddNewDomain" finished-at="2021-10-25T22:28:02 IST" duration-ms="54371" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddNewDomain -->
-        <test-method signature="AddElectives()[pri:8, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:28:02 IST" name="AddElectives" finished-at="2021-10-25T22:28:40 IST" duration-ms="38357" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddElectives -->
-        <test-method signature="AddFacility()[pri:9, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:28:40 IST" name="AddFacility" finished-at="2021-10-25T22:30:17 IST" duration-ms="96728" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddFacility -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.FacultyRole_ProblemBank_Add@909217e]" started-at="2021-10-25T22:30:17 IST" name="tearDown" finished-at="2021-10-25T22:30:20 IST" duration-ms="2296" status="PASS">
+        </test-method> <!-- ValidUserIdandPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.Login@6d4d66d2]" started-at="2021-11-22T15:17:22 IST" name="tearDown" finished-at="2021-11-22T15:17:24 IST" duration-ms="2440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.FacultyRole_ProblemBank_Add -->
-    </test> <!-- Problem Bank Add - Faculty Role -->
+      </class> <!-- testCases.Login -->
+    </test> <!-- Login -->
   </suite> <!-- BITS Automation -->
 </testng-results>
